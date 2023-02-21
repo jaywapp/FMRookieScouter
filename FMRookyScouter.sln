@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FMRookyScouter", "FMRookyScouter\FMRookyScouter.csproj", "{CBFEDEEE-50BA-487B-8639-1A42C75D9684}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBFEDEEE-50BA-487B-8639-1A42C75D9684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBFEDEEE-50BA-487B-8639-1A42C75D9684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBFEDEEE-50BA-487B-8639-1A42C75D9684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBFEDEEE-50BA-487B-8639-1A42C75D9684}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F0A50E7-B954-4D77-AAAF-96C4B6389096}
+	EndGlobalSection
+EndGlobal
