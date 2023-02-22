@@ -44,6 +44,9 @@
   <Player Ability="80" Potential="86">
     <Common Image="//img.fminside.net/facesfm23/20041862.png" Name="Alphonso Davies" Age="21" Length="185" Weight="77" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
         <Position>AML</Position>
       </Positions>
     </Common>
@@ -71,7 +74,9 @@
   </Player>
   <Player Ability="0" Potential="78">
     <Common Image="//img.fminside.net/facesfm23/29232937.png" Name="Jude Bellingham" Age="19" Length="186" Weight="75" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/907.png" Name="Borussia Dortmund" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -127,7 +132,9 @@
   </Player>
   <Player Ability="76" Potential="90">
     <Common Image="//img.fminside.net/facesfm23/49037900.png" Name="Wesley Fofana" Age="21" Length="190" Weight="76" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/630.png" Name="Chelsea FC" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -139,6 +146,7 @@
   <Player Ability="75" Potential="82">
     <Common Image="//img.fminside.net/facesfm23/14229525.png" Name="Enzo Fernández" Age="21" Length="178" Weight="70" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -151,7 +159,10 @@
   </Player>
   <Player Ability="0" Potential="75">
     <Common Image="//img.fminside.net/facesfm23/83261910.png" Name="Nuno Mendes" Age="20" Length="176" Weight="70" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/868.png" Name="Paris Saint-Germain" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -162,7 +173,12 @@
   </Player>
   <Player Ability="75" Potential="88">
     <Common Image="//img.fminside.net/facesfm23/37063644.png" Name="Jurriën Timber" Age="21" Length="179" Weight="79" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DC</Position>
+        <Position>DM</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/992.png" Name="Ajax" />
     <Nation Image="//img.fminside.net/flag-svg/nl.svg" Name="Netherlands" />
@@ -189,6 +205,9 @@
   <Player Ability="74" Potential="85">
     <Common Image="//img.fminside.net/facesfm23/28112986.png" Name="Callum Hudson-Odoi" Age="21" Length="178" Weight="79" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>WBR</Position>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -204,6 +223,7 @@
   <Player Ability="0" Potential="74">
     <Common Image="//img.fminside.net/facesfm23/2000049413.png" Name="Gavi" Age="17" Length="173" Weight="68" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -246,7 +266,9 @@
   </Player>
   <Player Ability="74" Potential="90">
     <Common Image="//img.fminside.net/facesfm23/49056243.png" Name="Eduardo Camavinga" Age="19" Length="182" Weight="68" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1736.png" Name="Real Madrid" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -257,7 +279,9 @@
   </Player>
   <Player Ability="73" Potential="88">
     <Common Image="//img.fminside.net/facesfm23/49039004.png" Name="William Saliba" Age="21" Length="192" Weight="83" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/602.png" Name="Arsenal" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -268,7 +292,9 @@
   </Player>
   <Player Ability="73" Potential="86">
     <Common Image="//img.fminside.net/facesfm23/67260207.png" Name="Unai Vencedor" Age="21" Length="176" Weight="71" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1664.png" Name="Athletic Bilbao" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -293,7 +319,9 @@
   </Player>
   <Player Ability="72" Potential="83">
     <Common Image="//img.fminside.net/facesfm23/28116427.png" Name="Eric García" Age="21" Length="182" Weight="79" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1708.png" Name="FC Barcelona" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -304,7 +332,9 @@
   </Player>
   <Player Ability="0" Potential="72">
     <Common Image="//img.fminside.net/facesfm23/86078360.png" Name="Moisés Caicedo" Age="20" Length="178" Weight="73" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/618.png" Name="Brighton" />
     <Nation Image="//img.fminside.net/flag-svg/ec.svg" Name="Ecuador" />
@@ -316,6 +346,7 @@
   <Player Ability="72" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/45104608.png" Name="Takefusa Kubo" Age="21" Length="167" Weight="60" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AMC</Position>
         <Position>ST</Position>
@@ -358,6 +389,7 @@
   <Player Ability="0" Potential="72">
     <Common Image="//img.fminside.net/facesfm23/16202373.png" Name="Dominik Szoboszlai" Age="21" Length="186" Weight="74" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
       </Positions>
@@ -371,7 +403,9 @@
   </Player>
   <Player Ability="72" Potential="84">
     <Common Image="//img.fminside.net/facesfm23/28108033.png" Name="Marc Guéhi" Age="21" Length="182" Weight="80" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/642.png" Name="Crystal Palace" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -398,7 +432,11 @@
   </Player>
   <Player Ability="0" Potential="71">
     <Common Image="//img.fminside.net/facesfm23/43426047.png" Name="Destiny Udogie" Age="19" Length="187" Weight="73" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1178.png" Name="Udinese" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -409,7 +447,13 @@
   </Player>
   <Player Ability="71" Potential="84">
     <Common Image="//img.fminside.net/facesfm23/28112993.png" Name="Tariq Lamptey" Age="21" Length="164" Weight="62" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DL</Position>
+        <Position>WBR</Position>
+        <Position>WBL</Position>
+        <Position>ML</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/618.png" Name="Brighton" />
     <Nation Image="//img.fminside.net/flag-svg/gh.svg" Name="Ghana" />
@@ -420,7 +464,13 @@
   </Player>
   <Player Ability="71" Potential="81">
     <Common Image="//img.fminside.net/facesfm23/28113828.png" Name="Jeremie Frimpong" Age="21" Length="171" Weight="64" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DL</Position>
+        <Position>WBR</Position>
+        <Position>WBL</Position>
+        <Position>ML</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/901.png" Name="Bayer Leverkusen" />
     <Nation Image="//img.fminside.net/flag-svg/nl.svg" Name="Netherlands" />
@@ -446,6 +496,7 @@
   <Player Ability="0" Potential="71">
     <Common Image="//img.fminside.net/facesfm23/37073317.png" Name="Kenneth Taylor" Age="20" Length="182" Weight="66" Role="GoalKeeper" Foot="Both">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -474,6 +525,7 @@
   <Player Ability="0" Potential="70">
     <Common Image="//img.fminside.net/facesfm23/72051281.png" Name="Giovanni Reyna" Age="19" Length="185" Weight="79" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
       </Positions>
@@ -488,6 +540,7 @@
   <Player Ability="70" Potential="82">
     <Common Image="//img.fminside.net/facesfm23/71101331.png" Name="Mykhaylo Mudryk" Age="21" Length="175" Weight="61" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -503,6 +556,8 @@
   <Player Ability="0" Potential="70">
     <Common Image="//img.fminside.net/facesfm23/37076092.png" Name="Noni Madueke" Age="20" Length="176" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -517,7 +572,10 @@
   </Player>
   <Player Ability="0" Potential="70">
     <Common Image="//img.fminside.net/facesfm23/24060473.png" Name="Joško Gvardiol" Age="20" Length="185" Weight="80" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/91013388.png" Name="RB Leipzig" />
     <Nation Image="//img.fminside.net/flag-svg/hr.svg" Name="Croatia" />
@@ -529,6 +587,8 @@
   <Player Ability="0" Potential="70">
     <Common Image="//img.fminside.net/facesfm23/67276230.png" Name="Nico Williams" Age="19" Length="180" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
       </Positions>
@@ -571,6 +631,7 @@
   <Player Ability="0" Potential="69">
     <Common Image="//img.fminside.net/facesfm23/37071197.png" Name="Ryan Gravenberch" Age="20" Length="190" Weight="77" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -584,6 +645,9 @@
   <Player Ability="0" Potential="69">
     <Common Image="//img.fminside.net/facesfm23/43426126.png" Name="Nicola Zalewski" Age="20" Length="175" Weight="63" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
         <Position>AML</Position>
       </Positions>
     </Common>
@@ -611,7 +675,9 @@
   </Player>
   <Player Ability="0" Potential="68">
     <Common Image="//img.fminside.net/facesfm23/67276127.png" Name="Nico" Age="20" Length="187" Weight="81" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1775.png" Name="Valencia" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -622,7 +688,11 @@
   </Player>
   <Player Ability="68" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/12078947.png" Name="Wilfried Singo" Age="21" Length="190" Weight="79" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>WBR</Position>
+        <Position>ML</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1174.png" Name="Torino" />
     <Nation Image="//img.fminside.net/flag-svg/ci.svg" Name="Ivory Coast" />
@@ -630,33 +700,7 @@
     <Physical Acceleration="16" Agility="14" Balance="12" JumpingReach="13" NaturalFitness="14" Pace="16" Stamina="14" Strength="14" />
     <Technical Corners="6" Crossing="12" Dribbling="14" Finishing="8" FirstTouch="11" FreeKickTaking="5" Heading="12" LongShots="7" LongThrows="12" Marking="10" Passing="13" PenaltyTaking="8" Tackling="12" Technique="12" />
     <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
-  </Player>
-  <Player Ability="0" Potential="68">
-    <Common Image="//img.fminside.net/facesfm23/28120042.png" Name="Cole Palmer" Age="20" Length="182" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions>
-        <Position>AMR</Position>
-        <Position>AML</Position>
-        <Position>AMC</Position>
-      </Positions>
-    </Common>
-    <Club Image="//img.fminside.net/logos/small/679.png" Name="Man City" />
-    <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
-    <Mental Aggression="8" Anticipation="13" Bravery="8" Composure="13" Concentration="12" Decisions="12" Determination="13" Flair="14" Leadership="7" OffTheBall="13" Positioning="8" Teamwork="11" Vision="13" WorkRate="13" />
-    <Physical Acceleration="15" Agility="14" Balance="13" JumpingReach="13" NaturalFitness="13" Pace="14" Stamina="13" Strength="8" />
-    <Technical Corners="12" Crossing="12" Dribbling="14" Finishing="13" FirstTouch="13" FreeKickTaking="12" Heading="8" LongShots="13" LongThrows="3" Marking="6" Passing="13" PenaltyTaking="13" Tackling="8" Technique="16" />
-    <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
-  </Player>
-  <Player Ability="0" Potential="68">
-    <Common Image="//img.fminside.net/facesfm23/71101334.png" Name="Anatolii Trubin" Age="20" Length="199" Weight="86" Role="GoalKeeper" Foot="Right">
-      <Positions />
-    </Common>
-    <Club Image="//img.fminside.net/logos/small/1895.png" Name="Shakhtar" />
-    <Nation Image="//img.fminside.net/flag-svg/ua.svg" Name="Ukraine" />
-    <Mental Aggression="7" Anticipation="14" Bravery="14" Composure="13" Concentration="12" Decisions="13" Determination="12" Flair="5" Leadership="7" OffTheBall="9" Positioning="16" Teamwork="12" Vision="11" WorkRate="14" />
-    <Physical Acceleration="12" Agility="13" Balance="12" JumpingReach="18" NaturalFitness="14" Pace="13" Stamina="13" Strength="14" />
-    <Technical Corners="0" Crossing="0" Dribbling="0" Finishing="0" FirstTouch="0" FreeKickTaking="2" Heading="0" LongShots="0" LongThrows="0" Marking="0" Passing="0" PenaltyTaking="11" Tackling="0" Technique="9" />
-    <Goalkeeping AerialReach="16" CommandOfArea="12" Communication="11" Eccentricity="3" FirstTouch="11" Handling="15" Kicking="11" OneOnOnes="11" Passing="13" Punching="9" Reflexes="15" RushingOut="6" Throwing="8" />
-  </Player>
+  </Player>  
   <Player Ability="0" Potential="68">
     <Common Image="//img.fminside.net/facesfm23/28120042.png" Name="Cole Palmer" Age="20" Length="182" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
@@ -686,6 +730,7 @@
   <Player Ability="0" Potential="68">
     <Common Image="//img.fminside.net/facesfm23/67260440.png" Name="Bryan Gil" Age="21" Length="175" Weight="69" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -701,6 +746,7 @@
   <Player Ability="68" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/62201068.png" Name="Ivan Ilic" Age="21" Length="182" Weight="75" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -713,7 +759,9 @@
   </Player>
   <Player Ability="67" Potential="81">
     <Common Image="//img.fminside.net/facesfm23/49047182.png" Name="Manu Koné" Age="21" Length="185" Weight="80" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/908.png" Name="Gladbach" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -724,7 +772,10 @@
   </Player>
   <Player Ability="67" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/28117365.png" Name="Luke Thomas" Age="21" Length="181" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/673.png" Name="Leicester" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -735,7 +786,10 @@
   </Player>
   <Player Ability="0" Potential="67">
     <Common Image="//img.fminside.net/facesfm23/28124569.png" Name="Tino Livramento" Age="19" Length="185" Weight="80" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/713.png" Name="Southampton" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -746,7 +800,10 @@
   </Player>
   <Player Ability="0" Potential="67">
     <Common Image="//img.fminside.net/facesfm23/49048365.png" Name="Tanguy Nianzou" Age="20" Length="191" Weight="85" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1759.png" Name="Sevilla" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -773,7 +830,9 @@
   </Player>
   <Player Ability="67" Potential="83">
     <Common Image="//img.fminside.net/facesfm23/19371902.png" Name="Danilo" Age="21" Length="176" Weight="69" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/329.png" Name="Palmeiras" />
     <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
@@ -798,7 +857,13 @@
   </Player>
   <Player Ability="0" Potential="67">
     <Common Image="//img.fminside.net/facesfm23/49048382.png" Name="Brandon Soppy" Age="20" Length="181" Weight="80" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DL</Position>
+        <Position>WBR</Position>
+        <Position>WBL</Position>
+        <Position>ML</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1106.png" Name="Atalanta" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -809,7 +874,11 @@
   </Player>
   <Player Ability="67" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/43429372.png" Name="Fabiano Parisi" Age="21" Length="178" Weight="70" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1126.png" Name="Empoli" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -849,7 +918,9 @@
   </Player>
   <Player Ability="67" Potential="83">
     <Common Image="//img.fminside.net/facesfm23/16191724.png" Name="Nicolas Seiwald" Age="21" Length="179" Weight="70" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/158.png" Name="FC RB Salzburg" />
     <Nation Image="//img.fminside.net/flag-svg/at.svg" Name="Austria" />
@@ -861,6 +932,7 @@
   <Player Ability="0" Potential="67">
     <Common Image="//img.fminside.net/facesfm23/67279753.png" Name="Ilaix Moriba" Age="19" Length="185" Weight="73" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -873,7 +945,9 @@
   </Player>
   <Player Ability="67" Potential="82">
     <Common Image="//img.fminside.net/facesfm23/43372285.png" Name="Caleb Okoli" Age="20" Length="187" Weight="76" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1106.png" Name="Atalanta" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -884,7 +958,9 @@
   </Player>
   <Player Ability="67" Potential="81">
     <Common Image="//img.fminside.net/facesfm23/43390774.png" Name="Samuele Ricci" Age="20" Length="181" Weight="70" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1174.png" Name="Torino" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -908,7 +984,10 @@
   </Player>
   <Player Ability="0" Potential="67">
     <Common Image="//img.fminside.net/facesfm23/91207274.png" Name="Amadou Onana" Age="20" Length="192" Weight="76" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/650.png" Name="Everton" />
     <Nation Image="//img.fminside.net/flag-svg/be.svg" Name="Belgium" />
@@ -930,7 +1009,9 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/83320135.png" Name="António Silva" Age="18" Length="187" Weight="80" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1487.png" Name="Benfica" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -941,7 +1022,10 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/86066853.png" Name="Piero Hincapié" Age="20" Length="184" Weight="76" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/901.png" Name="Bayer Leverkusen" />
     <Nation Image="//img.fminside.net/flag-svg/ec.svg" Name="Ecuador" />
@@ -966,7 +1050,12 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/61089387.png" Name="Aaron Hickey" Age="20" Length="176" Weight="72" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DL</Position>
+        <Position>WBR</Position>
+        <Position>WBL</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/617.png" Name="Brentford" />
     <Nation Image="//img.fminside.net/flag-svg/gb-sct.svg" Name="Scotland" />
@@ -978,6 +1067,7 @@
   <Player Ability="66" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/43424567.png" Name="Kristjan Asllani" Age="20" Length="175" Weight="68" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -990,7 +1080,10 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/49047581.png" Name="Rayan Aït-Nouri" Age="21" Length="180" Weight="70" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/740.png" Name="Wolves" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -1001,7 +1094,13 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/37073313.png" Name="Devyne Rensch" Age="19" Length="179" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DL</Position>
+        <Position>DC</Position>
+        <Position>DM</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/992.png" Name="Ajax" />
     <Nation Image="//img.fminside.net/flag-svg/nl.svg" Name="Netherlands" />
@@ -1012,7 +1111,10 @@
   </Player>
   <Player Ability="0" Potential="66">
     <Common Image="//img.fminside.net/facesfm23/43500755.png" Name="Giorgio Scalvini" Age="18" Length="194" Weight="87" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1106.png" Name="Atalanta" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -1053,6 +1155,8 @@
   <Player Ability="0" Potential="65">
     <Common Image="//img.fminside.net/facesfm23/67260506.png" Name="Kang-In Lee" Age="21" Length="173" Weight="68" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -1067,7 +1171,9 @@
   </Player>
   <Player Ability="0" Potential="65">
     <Common Image="//img.fminside.net/facesfm23/71113679.png" Name="Illia Zabarnyi" Age="19" Length="186" Weight="81" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1885.png" Name="Dynamo Kyiv" />
     <Nation Image="//img.fminside.net/flag-svg/ua.svg" Name="Ukraine" />
@@ -1079,6 +1185,7 @@
   <Player Ability="0" Potential="65">
     <Common Image="//img.fminside.net/facesfm23/43424754.png" Name="Matteo Cancellieri" Age="20" Length="180" Weight="79" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>ST</Position>
       </Positions>
@@ -1121,7 +1228,10 @@
   </Player>
   <Player Ability="65" Potential="81">
     <Common Image="//img.fminside.net/facesfm23/61083649.png" Name="Nathan Patterson" Age="20" Length="183" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/650.png" Name="Everton" />
     <Nation Image="//img.fminside.net/flag-svg/gb-sct.svg" Name="Scotland" />
@@ -1177,7 +1287,9 @@
   </Player>
   <Player Ability="0" Potential="64">
     <Common Image="//img.fminside.net/facesfm23/92102718.png" Name="Armel Bella-Kotchap" Age="20" Length="190" Weight="87" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/713.png" Name="Southampton" />
     <Nation Image="//img.fminside.net/flag-svg/de.svg" Name="Germany" />
@@ -1200,22 +1312,10 @@
     <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
   </Player>
   <Player Ability="0" Potential="64">
-    <Common Image="//img.fminside.net/facesfm23/71108249.png" Name="Heorhii Sudakov" Age="19" Length="177" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions>
-        <Position>AML</Position>
-        <Position>AMC</Position>
-      </Positions>
-    </Common>
-    <Club Image="//img.fminside.net/logos/small/1895.png" Name="Shakhtar" />
-    <Nation Image="//img.fminside.net/flag-svg/ua.svg" Name="Ukraine" />
-    <Mental Aggression="8" Anticipation="14" Bravery="9" Composure="13" Concentration="13" Decisions="13" Determination="13" Flair="9" Leadership="7" OffTheBall="12" Positioning="10" Teamwork="15" Vision="15" WorkRate="13" />
-    <Physical Acceleration="13" Agility="13" Balance="13" JumpingReach="11" NaturalFitness="11" Pace="14" Stamina="14" Strength="12" />
-    <Technical Corners="9" Crossing="9" Dribbling="12" Finishing="11" FirstTouch="12" FreeKickTaking="12" Heading="7" LongShots="11" LongThrows="5" Marking="7" Passing="15" PenaltyTaking="11" Tackling="10" Technique="13" />
-    <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
-  </Player>
-  <Player Ability="0" Potential="64">
     <Common Image="//img.fminside.net/facesfm23/43372892.png" Name="Nicolò Rovella" Age="20" Length="179" Weight="70" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1149.png" Name="Monza" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -1239,7 +1339,12 @@
   </Player>
   <Player Ability="0" Potential="64">
     <Common Image="//img.fminside.net/facesfm23/93127195.png" Name="Odilon Kossounou" Age="21" Length="191" Weight="81" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DC</Position>
+        <Position>DM</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/901.png" Name="Bayer Leverkusen" />
     <Nation Image="//img.fminside.net/flag-svg/ci.svg" Name="Ivory Coast" />
@@ -1251,6 +1356,9 @@
   <Player Ability="0" Potential="64">
     <Common Image="//img.fminside.net/facesfm23/67296654.png" Name="Alejandro Balde" Age="18" Length="175" Weight="69" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
         <Position>AML</Position>
       </Positions>
     </Common>
@@ -1263,7 +1371,9 @@
   </Player>
   <Player Ability="64" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/29186052.png" Name="Matt O Riley" Age="21" Length="187" Weight="77" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1569.png" Name="Celtic" />
     <Nation Image="//img.fminside.net/flag-svg/dk.svg" Name="Denmark" />
@@ -1328,7 +1438,9 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/14207518.png" Name="Gastón Ávila" Age="20" Length="182" Weight="80" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/262.png" Name="Antwerp" />
     <Nation Image="//img.fminside.net/flag-svg/ar.svg" Name="Argentina" />
@@ -1340,6 +1452,7 @@
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/28129089.png" Name="Yunus Musah" Age="19" Length="178" Weight="71" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AMC</Position>
       </Positions>
@@ -1354,6 +1467,7 @@
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/18113140.png" Name="Aster Vranckx" Age="19" Length="183" Weight="78" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -1397,7 +1511,10 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/2000053930.png" Name="José Ángel Carmona" Age="20" Length="184" Weight="74" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1759.png" Name="Sevilla" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -1460,7 +1577,9 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/43500130.png" Name="Diego Coppola" Age="18" Length="192" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/2201.png" Name="Hellas Verona" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -1471,7 +1590,10 @@
   </Player>
   <Player Ability="63" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/91206164.png" Name="Malick Thiaw" Age="20" Length="194" Weight="89" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1099.png" Name="AC Milan" />
     <Nation Image="//img.fminside.net/flag-svg/de.svg" Name="Germany" />
@@ -1493,7 +1615,9 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/43426109.png" Name="Mattia Viti" Age="20" Length="190" Weight="74" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/862.png" Name="OGC Nice" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -1517,7 +1641,9 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/2000015032.png" Name="Kaiky" Age="18" Length="186" Weight="76" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1661.png" Name="Almería" />
     <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
@@ -1528,7 +1654,9 @@
   </Player>
   <Player Ability="0" Potential="63">
     <Common Image="//img.fminside.net/facesfm23/61078265.png" Name="Billy Gilmour" Age="21" Length="170" Weight="65" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/618.png" Name="Brighton" />
     <Nation Image="//img.fminside.net/flag-svg/gb-sct.svg" Name="Scotland" />
@@ -1539,7 +1667,10 @@
   </Player>
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/49056280.png" Name="Malo Gusto" Age="19" Length="179" Weight="67" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/865.png" Name="Lyon" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -1550,7 +1681,10 @@
   </Player>
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/2000052247.png" Name="Ibrahima Bamba" Age="20" Length="184" Weight="75" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1494.png" Name="Vitória Guimarães" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -1574,7 +1708,9 @@
   </Player>
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/18115012.png" Name="Roméo Lavia" Age="18" Length="180" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/713.png" Name="Southampton" />
     <Nation Image="//img.fminside.net/flag-svg/be.svg" Name="Belgium" />
@@ -1585,7 +1721,9 @@
   </Player>
   <Player Ability="62" Potential="80">
     <Common Image="//img.fminside.net/facesfm23/67256515.png" Name="Antonio Blanco" Age="21" Length="175" Weight="63" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1682.png" Name="Cádiz" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -1609,7 +1747,9 @@
   </Player>
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/49056273.png" Name="Castello Lukeba" Age="19" Length="184" Weight="73" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/865.png" Name="Lyon" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -1635,6 +1775,7 @@
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/95079228.png" Name="Alex Scott" Age="18" Length="178" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMR</Position>
         <Position>AMC</Position>
       </Positions>
@@ -1648,7 +1789,11 @@
   </Player>
   <Player Ability="0" Potential="62">
     <Common Image="//img.fminside.net/facesfm23/91195878.png" Name="Luca Netz" Age="19" Length="184" Weight="83" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+        <Position>MR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/908.png" Name="Gladbach" />
     <Nation Image="//img.fminside.net/flag-svg/de.svg" Name="Germany" />
@@ -1747,7 +1892,9 @@
   </Player>
   <Player Ability="0" Potential="61">
     <Common Image="//img.fminside.net/facesfm23/49056367.png" Name="Lucas Gourna-Douath" Age="18" Length="185" Weight="81" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/158.png" Name="FC RB Salzburg" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -1810,7 +1957,9 @@
   </Player>
   <Player Ability="0" Potential="61">
     <Common Image="//img.fminside.net/facesfm23/49060933.png" Name="Maxime Estève" Age="20" Length="193" Weight="87" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/859.png" Name="Montpellier" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -1821,7 +1970,10 @@
   </Player>
   <Player Ability="0" Potential="61">
     <Common Image="//img.fminside.net/facesfm23/2000030216.png" Name="Omar Campos" Age="19" Length="174" Weight="65" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>WBL</Position>
+        <Position>MR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/106029.png" Name="Santos Laguna" />
     <Nation Image="//img.fminside.net/flag-svg/mx.svg" Name="Mexico" />
@@ -1926,7 +2078,9 @@
   </Player>
   <Player Ability="0" Potential="60">
     <Common Image="//img.fminside.net/facesfm23/2000007415.png" Name="Andrey Santos" Age="18" Length="181" Weight="72" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/339.png" Name="Vasco da Gama" />
     <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
@@ -2007,7 +2161,10 @@
   </Player>
   <Player Ability="0" Potential="59">
     <Common Image="//img.fminside.net/facesfm23/12088452.png" Name="Daouda Guindo" Age="19" Length="183" Weight="72" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1853.png" Name="FC St. Gallen" />
     <Nation Image="//img.fminside.net/flag-svg/ml.svg" Name="Mali" />
@@ -2064,6 +2221,7 @@
   <Player Ability="0" Potential="59">
     <Common Image="//img.fminside.net/facesfm23/2000051578.png" Name="Facundo Buonanotte" Age="17" Length="174" Weight="66" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -2116,7 +2274,9 @@
   </Player>
   <Player Ability="0" Potential="59">
     <Common Image="//img.fminside.net/facesfm23/2000047228.png" Name="Charlie Patino" Age="18" Length="182" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/613.png" Name="Blackpool" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -2144,6 +2304,8 @@
   <Player Ability="0" Potential="58">
     <Common Image="//img.fminside.net/facesfm23/67295206.png" Name="Nico Serrano" Age="19" Length="178" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -2159,6 +2321,7 @@
   <Player Ability="0" Potential="58">
     <Common Image="//img.fminside.net/facesfm23/43500064.png" Name="Cesare Casadei" Age="19" Length="186" Weight="72" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -2172,6 +2335,7 @@
   <Player Ability="0" Potential="58">
     <Common Image="//img.fminside.net/facesfm23/2000056415.png" Name="Ilias Akhomach" Age="18" Length="175" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AMC</Position>
       </Positions>
@@ -2267,7 +2431,9 @@
   </Player>
   <Player Ability="0" Potential="56">
     <Common Image="//img.fminside.net/facesfm23/2000136297.png" Name="Robert Renan" Age="18" Length="186" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/319.png" Name="Corinthians" />
     <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
@@ -2319,6 +2485,7 @@
   <Player Ability="0" Potential="55">
     <Common Image="//img.fminside.net/facesfm23/53167331.png" Name="Tobias Gulliksen" Age="18" Length="177" Weight="70" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
       </Positions>
@@ -2360,7 +2527,9 @@
   </Player>
   <Player Ability="0" Potential="55">
     <Common Image="//img.fminside.net/facesfm23/18115016.png" Name="Zeno Debast" Age="18" Length="191" Weight="73" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/256.png" Name="RSC Anderlecht" />
     <Nation Image="//img.fminside.net/flag-svg/be.svg" Name="Belgium" />
@@ -2400,6 +2569,7 @@
   <Player Ability="0" Potential="54">
     <Common Image="//img.fminside.net/facesfm23/2000041123.png" Name="Amourricho van Axel Dongen" Age="17" Length="173" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AML</Position>
       </Positions>
     </Common>
@@ -2511,6 +2681,7 @@
   <Player Ability="0" Potential="53">
     <Common Image="//img.fminside.net/facesfm23/2000088490.png" Name="Roony Bardghji" Age="16" Length="172" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>ML</Position>
         <Position>AMR</Position>
       </Positions>
     </Common>
@@ -2524,6 +2695,7 @@
   <Player Ability="0" Potential="53">
     <Common Image="//img.fminside.net/facesfm23/2000050627.png" Name="Alfie Devine" Age="17" Length="167" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -2536,7 +2708,10 @@
   </Player>
   <Player Ability="0" Potential="53">
     <Common Image="//img.fminside.net/facesfm23/19384379.png" Name="Patryck Lanza" Age="19" Length="181" Weight="68" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>WBL</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/337.png" Name="São Paulo" />
     <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
@@ -2561,6 +2736,7 @@
   <Player Ability="0" Potential="53">
     <Common Image="//img.fminside.net/facesfm23/58156290.png" Name="Sergey Pinyaev" Age="17" Length="167" Weight="63" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>ST</Position>
@@ -2599,22 +2775,10 @@
     <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
   </Player>
   <Player Ability="0" Potential="52">
-    <Common Image="//img.fminside.net/facesfm23/2000082429.png" Name="Giovani" Age="18" Length="182" Weight="70" Role="GoalKeeper" Foot="Left">
-      <Positions>
-        <Position>AMR</Position>
-        <Position>AML</Position>
-      </Positions>
-    </Common>
-    <Club Image="//img.fminside.net/logos/small/329.png" Name="Palmeiras" />
-    <Nation Image="//img.fminside.net/flag-svg/br.svg" Name="Brazil" />
-    <Mental Aggression="15" Anticipation="11" Bravery="10" Composure="11" Concentration="9" Decisions="9" Determination="2" Flair="11" Leadership="1" OffTheBall="10" Positioning="10" Teamwork="9" Vision="12" WorkRate="11" />
-    <Physical Acceleration="12" Agility="14" Balance="6" JumpingReach="11" NaturalFitness="14" Pace="13" Stamina="15" Strength="7" />
-    <Technical Corners="11" Crossing="10" Dribbling="13" Finishing="11" FirstTouch="13" FreeKickTaking="8" Heading="11" LongShots="10" LongThrows="10" Marking="8" Passing="16" PenaltyTaking="7" Tackling="8" Technique="14" />
-    <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
-  </Player>
-  <Player Ability="0" Potential="52">
     <Common Image="//img.fminside.net/facesfm23/2000024755.png" Name="Giacomo Faticanti" Age="17" Length="183" Weight="70" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1100.png" Name="AS Roma" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -2625,7 +2789,9 @@
   </Player>
   <Player Ability="0" Potential="52">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Sammy Braybrooke" Age="18" Length="171" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/673.png" Name="Leicester" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -2664,6 +2830,8 @@
   <Player Ability="0" Potential="51">
     <Common Image="//img.fminside.net/facesfm23/2000073857.png" Name="Guilherme Biro" Age="18" Length="176" Weight="0" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -2679,6 +2847,7 @@
   <Player Ability="0" Potential="51">
     <Common Image="//img.fminside.net/facesfm23/2000011404.png" Name="Mohamed El Arouch" Age="18" Length="166" Weight="56" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -2771,7 +2940,9 @@
   </Player>
   <Player Ability="0" Potential="51">
     <Common Image="//img.fminside.net/facesfm23/2000087400.png" Name="Dário Essugo" Age="17" Length="181" Weight="75" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1489.png" Name="Sporting CP" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -2783,6 +2954,8 @@
   <Player Ability="0" Potential="50">
     <Common Image="//img.fminside.net/facesfm23/2000087434.png" Name="Isaac Babadi" Age="17" Length="179" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
         <Position>AMC</Position>
@@ -2797,7 +2970,9 @@
   </Player>
   <Player Ability="0" Potential="50">
     <Common Image="//img.fminside.net/facesfm23/2000179712.png" Name="Warren Zaïre-Emery" Age="16" Length="178" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/868.png" Name="Paris Saint-Germain" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -2819,7 +2994,9 @@
   </Player>
   <Player Ability="0" Potential="50">
     <Common Image="//img.fminside.net/facesfm23/2000100253.png" Name="El Chadaille Bitshiabu" Age="17" Length="196" Weight="95" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/868.png" Name="Paris Saint-Germain" />
     <Nation Image="//img.fminside.net/flag-svg/fr.svg" Name="France" />
@@ -2830,7 +3007,9 @@
   </Player>
   <Player Ability="0" Potential="50">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Kobbie Mainoo" Age="17" Length="180" Weight="66" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/680.png" Name="Manchester United" />
     <Nation Image="//img.fminside.net/flag-svg/gb-eng.svg" Name="England" />
@@ -2891,7 +3070,10 @@
   </Player>
   <Player Ability="0" Potential="50">
     <Common Image="//img.fminside.net/facesfm23/2000030816.png" Name="Christian Mosquera" Age="18" Length="191" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1775.png" Name="Valencia" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -2947,7 +3129,9 @@
   </Player>
   <Player Ability="0" Potential="49">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Marc Cucalon" Age="17" Length="181" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1736.png" Name="Real Madrid" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
@@ -2958,7 +3142,10 @@
   </Player>
   <Player Ability="0" Potential="49">
     <Common Image="//img.fminside.net/facesfm23/2000046151.png" Name="Silvano Vos" Age="17" Length="189" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/992.png" Name="Ajax" />
     <Nation Image="//img.fminside.net/flag-svg/nl.svg" Name="Netherlands" />
@@ -3031,7 +3218,9 @@
   </Player>
   <Player Ability="0" Potential="48">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Noël Aséko Nkili" Age="16" Length="183" Weight="77" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/915.png" Name="FC Bayern" />
     <Nation Image="//img.fminside.net/flag-svg/de.svg" Name="Germany" />
@@ -3083,6 +3272,8 @@
   <Player Ability="0" Potential="47">
     <Common Image="//img.fminside.net/facesfm23/2000163799.png" Name="Nico Paz" Age="17" Length="176" Weight="64" Role="GoalKeeper" Foot="Left">
       <Positions>
+        <Position>MR</Position>
+        <Position>ML</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
       </Positions>
@@ -3096,7 +3287,10 @@
   </Player>
   <Player Ability="0" Potential="47">
     <Common Image="//img.fminside.net/facesfm23/2000097938.png" Name="Wisdom Amey" Age="16" Length="187" Weight="0" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1111.png" Name="Bologna" />
     <Nation Image="//img.fminside.net/flag-svg/it.svg" Name="Italy" />
@@ -3107,7 +3301,10 @@
   </Player>
   <Player Ability="0" Potential="47">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Jorrel Hato" Age="16" Length="187" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DL</Position>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/992.png" Name="Ajax" />
     <Nation Image="//img.fminside.net/flag-svg/nl.svg" Name="Netherlands" />
@@ -3226,6 +3423,7 @@
   <Player Ability="0" Potential="44">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Lucas Bergvall" Age="16" Length="186" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>DM</Position>
         <Position>AMC</Position>
       </Positions>
     </Common>
@@ -3317,7 +3515,10 @@
   </Player>
   <Player Ability="0" Potential="42">
     <Common Image="//img.fminside.net/facesfm23/2000183245.png" Name="Martim Fernandes" Age="16" Length="181" Weight="74" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DR</Position>
+        <Position>WBR</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1478.png" Name="FC Porto" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -3329,6 +3530,7 @@
   <Player Ability="0" Potential="42">
     <Common Image="//img.fminside.net/facesfm23/2000164850.png" Name="Ben Doak" Age="16" Length="177" Weight="0" Role="GoalKeeper" Foot="Right">
       <Positions>
+        <Position>MR</Position>
         <Position>AMR</Position>
         <Position>AML</Position>
       </Positions>
@@ -3353,7 +3555,9 @@
   </Player>
   <Player Ability="0" Potential="41">
     <Common Image="//img.fminside.net/facesfm23/83297596.png" Name="Rafael Luís" Age="17" Length="188" Weight="74" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1487.png" Name="Benfica" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -3390,7 +3594,9 @@
   </Player>
   <Player Ability="0" Potential="40">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Victor Eletu" Age="17" Length="178" Weight="71" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DM</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1099.png" Name="AC Milan" />
     <Nation Image="//img.fminside.net/flag-svg/ng.svg" Name="Nigeria" />
@@ -3416,7 +3622,9 @@
   </Player>
   <Player Ability="0" Potential="40">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="João Fonseca" Age="15" Length="183" Weight="72" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1487.png" Name="Benfica" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />
@@ -3455,7 +3663,9 @@
   </Player>
   <Player Ability="0" Potential="32">
     <Common Image="//img.fminside.net/faces/default-2020.png" Name="Jaime Vazquez" Age="16" Length="183" Weight="0" Role="GoalKeeper" Foot="Left">
-      <Positions />
+      <Positions>
+        <Position>DC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1736.png" Name="Real Madrid" />
     <Nation Image="//img.fminside.net/flag-svg/es.svg" Name="Spain" />
