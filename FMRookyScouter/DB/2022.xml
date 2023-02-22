@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Players>
+<Sesson Year="2022">
   <Player Ability="89" Potential="95">
     <Common Image="//img.fminside.net/facesfm22/29179241.png" Name="Erling Haaland" Age="20" Length="194" Weight="88" Role="GoalKeeper" Foot="Left">
       <Positions>
@@ -3229,4 +3229,4 @@
     <Technical Corners="3" Crossing="7" Dribbling="10" Finishing="4" FirstTouch="9" FreeKickTaking="4" Heading="6" LongShots="4" LongThrows="5" Marking="5" Passing="6" PenaltyTaking="1" Tackling="5" Technique="13" />
     <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
   </Player>
-</Players>
+</Sesson>

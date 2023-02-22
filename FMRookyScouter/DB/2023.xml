@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Players>
+<Sesson Year="2023">
   <Player Ability="93" Potential="98">
     <Common Image="//img.fminside.net/facesfm23/29179241.png" Name="Erling Haaland" Age="21" Length="195" Weight="88" Role="GoalKeeper" Foot="Left">
       <Positions>
@@ -3464,4 +3464,4 @@
     <Technical Corners="4" Crossing="4" Dribbling="1" Finishing="1" FirstTouch="5" FreeKickTaking="11" Heading="12" LongShots="4" LongThrows="4" Marking="10" Passing="11" PenaltyTaking="1" Tackling="8" Technique="4" />
     <Goalkeeping AerialReach="0" CommandOfArea="0" Communication="0" Eccentricity="0" FirstTouch="0" Handling="0" Kicking="0" OneOnOnes="0" Passing="0" Punching="0" Reflexes="0" RushingOut="0" Throwing="0" />
   </Player>
-</Players>
+</Sesson>

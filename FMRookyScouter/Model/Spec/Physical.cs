@@ -1,9 +1,11 @@
-﻿using System.Xml.Linq;
+﻿using FMRookyScouter.Interface;
+using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Spec
 {
-    public class Physical
+    public class Physical : IXElementSerializable
     {
+        #region Properties
         public int Acceleration { get; set; } = 0;
         public int Agility { get; set; } = 0;
         public int Balance { get; set; } = 0;
@@ -12,23 +14,11 @@ namespace FMRookyScouter.Model.Spec
         public int Pace { get; set; } = 0;
         public int Stamina { get; set; } = 0;
         public int Strength { get; set; } = 0;
+        #endregion
 
-        public XElement Save()
-        {
-            var element = new XElement(nameof(Physical));
-
-            var properties = typeof(Physical).GetProperties();
-
-            foreach (var property in properties)
-            {
-                var value = property.GetValue(this);
-                if (value == null)
-                    continue;
-
-                element.Add(new XAttribute(property.Name, value));
-            }
-
-            return element;
-        }
+        #region Functions
+        public void Load(XElement element) => this.LoadSpec(element);
+        public XElement Save() => this.SaveSpec();
+        #endregion
     }
 }

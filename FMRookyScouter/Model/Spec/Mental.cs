@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FMRookyScouter.Interface;
 using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Spec
 {
-    public class Mental
+    public class Mental : IXElementSerializable
     {
+        #region Properties
         public int Aggression { get; set; } = 0;
         public int Anticipation { get; set; } = 0;
         public int Bravery { get; set; } = 0;
@@ -23,23 +20,11 @@ namespace FMRookyScouter.Model.Spec
         public int Teamwork { get; set; } = 0;
         public int Vision { get; set; } = 0;
         public int WorkRate { get; set; } = 0;
+        #endregion
 
-        public XElement Save()
-        {
-            var element = new XElement(nameof(Mental));
-
-            var properties = typeof(Mental).GetProperties();
-
-            foreach (var property in properties)
-            {
-                var value = property.GetValue(this);
-                if (value == null)
-                    continue;
-
-                element.Add(new XAttribute(property.Name, value));
-            }
-
-            return element;
-        }
+        #region Functions
+        public void Load(XElement element) => this.LoadSpec(element);
+        public XElement Save() => this.SaveSpec();
+        #endregion
     }
 }
