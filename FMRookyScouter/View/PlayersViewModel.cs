@@ -1,13 +1,17 @@
-﻿using FMRookyScouter.Model;
+﻿using FMRookyScouter.Item;
+using FMRookyScouter.Model;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Media.Imaging;
 
 namespace FMRookyScouter.View
 {
     public class PlayersViewModel : ReactiveObject
     {
-        public List<Player> Players { get; }
+        public List<PlayerItem> Players { get; }
+        public Dictionary<string, BitmapImage> Bitmaps { get; }
 
         private Player _selectedPlayer;
 
@@ -17,9 +21,10 @@ namespace FMRookyScouter.View
             set => this.RaiseAndSetIfChanged(ref _selectedPlayer, value);
         }
 
-        public PlayersViewModel(Sesson sesson)
+        public PlayersViewModel(Sesson sesson, Dictionary<string, BitmapImage> bitmaps)
         {
-            Players = sesson.Players;
+            Players = sesson.Players.Select(p=> new PlayerItem(p, bitmaps)).ToList();
+            Bitmaps = bitmaps;
 
             this.WhenAnyValue(x => x.SelectedPlayer)
                 .Subscribe(OnSelectedPlayerChanged);

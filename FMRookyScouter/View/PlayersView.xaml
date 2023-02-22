@@ -9,7 +9,47 @@
     <ListBox ItemsSource="{Binding Players}" SelectedItem="{Binding SelectedPlayer}">
         <ListBox.ItemTemplate>
             <DataTemplate>
-                <local:PlayerItemView DataContext="{Binding}" />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock" x:Key="Name">
+                        </Style>
+
+                        <Style TargetType="TextBlock" x:Key="Position">
+                        </Style>
+
+                    </Grid.Resources>
+                    <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="{Binding Picture}"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Name}"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Positions}"/>
+                    <Grid Grid.Row="2" Grid.Column="1" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding ClubLogo}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding ClubName}"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="2" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding NationLogo}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding NationName}"/>
+                    </Grid>
+                </Grid>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>

@@ -14,7 +14,7 @@ namespace FMRookyScouter
         public MainWindowViewModel()
         {
             Access = new DBAccess();
-            PlayersViewModel = new PlayersViewModel(Access.Sessons.Values.FirstOrDefault());
+            PlayersViewModel = new PlayersViewModel(Access.Sessons.Values.FirstOrDefault(), Access.Bitmaps);
         }
     }
 }

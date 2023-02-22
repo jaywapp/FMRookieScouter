@@ -16,17 +16,6 @@ namespace FMRookyScouter.Model.Information
         public ePosition[] Positions { get; set; }
         public eRole Role { get; set; }
         public eFoot Foot { get; set; }
-
-        public string DisplayPositions
-        {
-            get
-            {
-                if (Positions == null)
-                    return "-";
-                
-                return string.Join(" / ", Positions);
-            }
-        }
         #endregion
 
         #region Functions
