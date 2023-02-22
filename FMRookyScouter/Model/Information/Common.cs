@@ -16,6 +16,17 @@ namespace FMRookyScouter.Model.Information
         public ePosition[] Positions { get; set; }
         public eRole Role { get; set; }
         public eFoot Foot { get; set; }
+
+        public string DisplayPositions
+        {
+            get
+            {
+                if (Positions == null)
+                    return "-";
+                
+                return string.Join(" / ", Positions);
+            }
+        }
         #endregion
 
         #region Functions
@@ -78,6 +89,8 @@ namespace FMRookyScouter.Model.Information
                 if (Enum.TryParse(child.Value, out ePosition position))
                     positions.Add(position);
             }
+
+            Positions = positions.ToArray();
         }
 
         private XElement SavePositions()

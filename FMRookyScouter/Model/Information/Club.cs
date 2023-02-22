@@ -1,9 +1,11 @@
-﻿using FMRookyScouter.Interface;
+﻿using Avalonia.Media.Imaging;
+using FMRookyScouter.Interface;
+using System.Windows.Media.Imaging;
 using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Information
 {
-    public class Club : IXElementSerializable
+    public class Club : IXElementSerializable, IHasImage
     {
         #region Properties
         public string Image { get; set; }
@@ -24,7 +26,6 @@ namespace FMRookyScouter.Model.Information
             return element;
         }
 
-
         public void Load(XElement element)
         {
             if (element.Name != nameof(Club))
@@ -34,6 +35,23 @@ namespace FMRookyScouter.Model.Information
                 Image = image;
             if (element.TryGetAttributeValue(nameof(Name), out string name))
                 Name = name;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is Club other
+                && Name == other.Name
+                && Image == other.Image;
+        }
+
+        public override int GetHashCode()
+        {
+            var code = 123781314;
+
+            code ^= Name.GetHashCode();
+            code ^= Image.GetHashCode();
+
+            return code;
         }
         #endregion
     }

@@ -9,10 +9,20 @@ namespace FMRookyScouter
 {
     public enum ePosition
     {
-        ST,
+        G,
+        DR,
+        DL,
+        WBL,
+        WBR,
+        DC,
+        DM,
+        M,
+        ML,
+        MR,
         AMR,
         AML,
-        AMC
+        AMC,
+        ST,
     }
 
     public enum eFoot
