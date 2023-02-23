@@ -9,27 +9,25 @@ namespace FMRookyScouter.View
 {
     public class PlayersViewModel : ReactiveObject
     {
+        #region Internal Field
+        private PlayerItem _selectedPlayer;
+        #endregion
+
+        #region Properties
         public List<PlayerItem> Players { get; }
 
-        private Player _selectedPlayer;
-
-        public int MinWidth { get; } = 200;
-        public Player SelectedPlayer
+        public PlayerItem SelectedPlayer
         {
             get => _selectedPlayer;
             set => this.RaiseAndSetIfChanged(ref _selectedPlayer, value);
         }
+        #endregion
 
+        #region Constructor
         public PlayersViewModel(Sesson sesson)
         {
             Players = sesson.Players.Select(p=> new PlayerItem(p)).ToList();
-
-            this.WhenAnyValue(x => x.SelectedPlayer)
-                .Subscribe(OnSelectedPlayerChanged);
         }
-
-        private void OnSelectedPlayerChanged(Player obj)
-        {
-        }
+        #endregion
     }
 }

@@ -3,13 +3,82 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:FMRookyScouter.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     <ListBox ItemsSource="{Binding Players}" SelectedItem="{Binding SelectedPlayer}">
         <ListBox.ItemTemplate>
             <DataTemplate>
-                <local:PlayerItemView DataContext="{Binding}"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.Resources>
+                        <Style TargetType="Image" x:Key="Picture">
+                            <Setter Property="Width" Value="60"/>
+                        </Style>
+                        <Style TargetType="Grid" x:Key="SpecGrid">
+                            <Setter Property="Margin" Value="10, 0, 10, 0"/>
+                        </Style>
+                        <Style TargetType="TextBlock" x:Key="Name">
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="FontSize" Value="13"/>
+                        </Style>
+                        <Style TargetType="TextBlock" x:Key="Position">
+                        </Style>
+                        <Style TargetType="StackPanel" x:Key="BelongStack">
+                            <Setter Property="Orientation" Value="Horizontal"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                        </Style>
+                        <Style TargetType="Image" x:Key="BelongImage">
+                            <Setter Property="Width" Value="20"/>
+                            <Setter Property="Height" Value="20"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="0, 0, 5, 0"/>
+                        </Style>
+                        <Style TargetType="TextBlock" x:Key="BelongName">
+                            <Setter Property="TextAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="0, 0, 10, 0"/>
+                        </Style>
+                        <Style TargetType="TextBlock" x:Key="SpecHeader">
+                            <Setter Property="TextAlignment" Value="Center"/>
+                        </Style>
+                        <Style TargetType="TextBlock" x:Key="SpecValue">
+                            <Setter Property="TextAlignment" Value="Center"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" 
+                   Style="{StaticResource Picture}" Source="{Binding PicturePath}"/>
+
+                    <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Style="{StaticResource SpecGrid}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Style="{StaticResource SpecHeader}" Text="Ability"/>
+                        <TextBlock Grid.Row="1" Style="{StaticResource SpecValue}" Text="{Binding Ability}"/>
+                        <TextBlock Grid.Row="2" Style="{StaticResource SpecHeader}" Text="Potential"/>
+                        <TextBlock Grid.Row="3" Style="{StaticResource SpecValue}" Text="{Binding Potential}"/>
+                    </Grid>
+
+                    <TextBlock Grid.Row="0" Grid.Column="2" Style="{StaticResource Name}" Text="{Binding Name}"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" Style="{StaticResource Position}" Text="{Binding Positions}"/>
+                    <StackPanel Grid.Row="2" Grid.Column="2" Style="{StaticResource BelongStack}" >
+                        <Image Source="{Binding ClubLogoPath}" Style="{StaticResource BelongImage}"/>
+                        <TextBlock Text="{Binding ClubName}" Style="{StaticResource BelongName}"/>
+                        <Image Source="{Binding NationLogoPath}" Style="{StaticResource BelongImage}"/>
+                        <TextBlock Text="{Binding NationName}" Style="{StaticResource BelongName}"/>
+                    </StackPanel>
+                </Grid>
             </DataTemplate>
         </ListBox.ItemTemplate>
     </ListBox>
