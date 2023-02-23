@@ -1,7 +1,6 @@
-﻿using FMRookyScouter.Model;
+﻿using FMRookyScouter.Helper;
+using FMRookyScouter.Model;
 using ReactiveUI;
-using System.Collections.Generic;
-using System.Windows.Media.Imaging;
 
 namespace FMRookyScouter.Item
 {
@@ -13,27 +12,39 @@ namespace FMRookyScouter.Item
         public string Positions { get;  }
         public string ClubName { get; }
         public string NationName { get; }
-        public BitmapImage Picture { get; }
-        public BitmapImage ClubLogo { get; }
-        public BitmapImage NationLogo { get; }
+        public string PicturePath { get; }
+        public string ClubLogoPath { get; }
+        public string NationLogoPath { get; }
 
-        public PlayerItem(Player player, Dictionary<string, BitmapImage> bitmaps)
+        public PlayerItem(Player player)
         {
             _player = player;
 
             Name = player.Common.Name;
+            PicturePath = GetPicturePath(Name);
+
             Positions = player.Common?.Positions == null
                 ? "-" : string.Join(" / ", player.Common?.Positions);
-
             ClubName = player.Club.Name;
+            ClubLogoPath = GetLogoPath(player.Club?.Name);
             NationName = player.Nation.Name;
+            NationLogoPath = GetLogoPath(player.Nation?.Name);
+        }
 
-            if(!string.IsNullOrEmpty(Name) && bitmaps.ContainsKey(Name))
-                Picture = bitmaps[Name];
-            if (!string.IsNullOrEmpty(ClubName) && bitmaps.ContainsKey(ClubName))
-                ClubLogo = bitmaps[ClubName];
-            if (!string.IsNullOrEmpty(NationName) && bitmaps.ContainsKey(NationName))
-                NationLogo = bitmaps[NationName];
+        private static string GetLogoPath(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return string.Empty;
+
+            return $"/FMRookyScouter;component/Logo/{name.TrimEnglish()}.png";
+        }
+
+        private static string GetPicturePath(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+                return string.Empty;
+
+            return $"/FMRookyScouter;component/Picture/{name.TrimEnglish()}.png";
         }
     }
 }
