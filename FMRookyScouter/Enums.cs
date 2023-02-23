@@ -1,22 +1,17 @@
 ﻿using FMRookyScouter.Attribute;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FMRookyScouter
 {
     public enum ePosition
     {
-        G,
+        GK,
         DR,
         DL,
         WBL,
         WBR,
         DC,
         DM,
-        M,
+        MC,
         ML,
         MR,
         AMR,

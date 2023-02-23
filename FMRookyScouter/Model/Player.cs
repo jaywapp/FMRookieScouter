@@ -64,6 +64,8 @@ namespace FMRookyScouter.Model
         }
 
         public override string ToString() => $"{Common.Name} ({Ability}, {Potential})";
+
+        public string GetID() => $"{Common.Name} {Club.Name} {Nation.Name}";
         #endregion
     }
 }

@@ -14,7 +14,7 @@ namespace FMRookyScouter.Model.Information
         public double Length { get; set; } = 0;
         public double Weight { get; set; } = 0;
         public ePosition[] Positions { get; set; }
-        public eRole Role { get; set; }
+        public List<Role> Roles { get; set; } = new List<Role>();
         public eFoot Foot { get; set; }
         #endregion
 
@@ -31,10 +31,10 @@ namespace FMRookyScouter.Model.Information
                 new XAttribute(nameof(Age), Age),
                 new XAttribute(nameof(Length), Length),
                 new XAttribute(nameof(Weight), Weight),
-                new XAttribute(nameof(Role), Role),
                 new XAttribute(nameof(Foot), Foot));
 
             element.Add(SavePositions());
+            element.Add(SaveRoles());
 
             return element;
         }
@@ -56,24 +56,21 @@ namespace FMRookyScouter.Model.Information
                 Weight = weight;
             if (element.TryGetAttributeEnumValue(nameof(Foot), out eFoot foot))
                 Foot = foot;
-            if (element.TryGetAttributeEnumValue(nameof(Role), out eRole role))
-                Role = role;
 
-            var child = element.Element(nameof(Positions));
-            if (child == null)
-                return;
-
-            LoadPositions(child);
+            LoadPositions(element.Element(nameof(Positions)));
+            LoadRoles(element.Element(nameof(Roles)));
         }
 
         private void LoadPositions(XElement element)
         {
+            if (element == null)
+                return;
             if (element.Name != nameof(Positions))
                 return;
 
             var positions = new List<ePosition>();
             var children = element.Elements("Position");
-            foreach(var child in children)
+            foreach (var child in children)
             {
                 if (Enum.TryParse(child.Value, out ePosition position))
                     positions.Add(position);
@@ -82,17 +79,48 @@ namespace FMRookyScouter.Model.Information
             Positions = positions.ToArray();
         }
 
+        private void LoadRoles(XElement element)
+        {
+            if (element == null)
+                return;
+            if (element.Name != nameof(Roles))
+                return;
+
+            var roles = new List<Role>();
+
+            var children = element.Elements(nameof(Role));
+            foreach (var child in children)
+            {
+                var role = new Role();
+
+                role.Load(child);
+                roles.Add(role);
+            }
+
+            Roles = roles;
+        }
+
         private XElement SavePositions()
         {
             var element = new XElement(nameof(Positions));
 
-            foreach(var position in Positions)
+            foreach (var position in Positions)
             {
                 var child = new XElement("Position");
                 child.Value = position.ToString();
 
                 element.Add(child);
             }
+
+            return element;
+        }
+
+        private XElement SaveRoles()
+        {
+            var element = new XElement(nameof(Roles));
+
+            foreach (var role in Roles)
+                element.Add(role.Save());
 
             return element;
         }

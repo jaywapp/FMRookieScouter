@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace FMRookyScouter.Model
 {
-    public class Sesson  : IXElementSerializable
+    public class Sesson : IXElementSerializable
     {
         #region Internal Field
         private List<Player> _players = new List<Player>();
@@ -45,15 +45,18 @@ namespace FMRookyScouter.Model
             var children = element.Elements().ToList();
             var players = new List<Player>();
 
-            foreach(var child in children)
+            foreach (var child in children)
             {
                 var player = new Player();
-                
+
                 player.Load(child);
                 players.Add(player);
             }
 
-            Players = players;
+            Players = players
+                .GroupBy(p => p.GetID())
+                .Select(g => g.FirstOrDefault())
+                .ToList();
         }
 
         public XElement Save()
@@ -70,4 +73,3 @@ namespace FMRookyScouter.Model
         #endregion
     }
 }
- 

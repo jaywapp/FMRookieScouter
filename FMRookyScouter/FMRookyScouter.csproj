@@ -215,6 +215,7 @@
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Interface\IHasImage.cs" />
     <Compile Include="Item\PlayerItem.cs" />
+    <Compile Include="Model\Information\Role.cs" />
     <Compile Include="View\PlayerItemView.xaml.cs">
       <DependentUpon>PlayerItemView.xaml</DependentUpon>
     </Compile>
