@@ -12,38 +12,70 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.Resources>
-            <Style TargetType="TextBlock" x:Key="Name">
+            <Style TargetType="Image" x:Key="Picture">
+                <Setter Property="Width" Value="60"/>
             </Style>
-
+            <Style TargetType="Grid" x:Key="SpecGrid">
+                <Setter Property="Margin" Value="10, 0, 10, 0"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="Name">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="13"/>
+            </Style>
             <Style TargetType="TextBlock" x:Key="Position">
             </Style>
-
+            <Style TargetType="StackPanel" x:Key="BelongStack">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+            </Style>
+            <Style TargetType="Image" x:Key="BelongImage">
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0, 0, 5, 0"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="BelongName">
+                <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0, 0, 10, 0"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="SpecHeader">
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="TextBlock" x:Key="SpecValue">
+                <Setter Property="TextAlignment" Value="Center"/>
+            </Style>
         </Grid.Resources>
-        <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" Source="{Binding PicturePath}"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Name}"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Positions}"/>
-        <Grid Grid.Row="2" Grid.Column="1" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Image x:Name="img1" Grid.Column="0" Source="{Binding ClubLogoPath}"/>
-            <TextBlock Grid.Column="1" Text="{Binding ClubName}"/>
+        <Image Grid.Row="0" Grid.RowSpan="3" Grid.Column="0" 
+                   Style="{StaticResource Picture}" Source="{Binding PicturePath}"/>
+        
+        <Grid Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Style="{StaticResource SpecGrid}">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Style="{StaticResource SpecHeader}" Text="Ability"/>
+            <TextBlock Grid.Row="1" Style="{StaticResource SpecValue}" Text="{Binding Ability}"/>
+            <TextBlock Grid.Row="2" Style="{StaticResource SpecHeader}" Text="Potential"/>
+            <TextBlock Grid.Row="3" Style="{StaticResource SpecValue}" Text="{Binding Potential}"/>
         </Grid>
-
-        <Grid Grid.Row="2" Grid.Column="2" >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Image x:Name="img2" Grid.Column="0" Source="{Binding NationLogoPath}"/>
-            <TextBlock Grid.Column="1" Text="{Binding NationName}"/>
-        </Grid>
+        
+        <TextBlock Grid.Row="0" Grid.Column="2"
+                   Style="{StaticResource Name}" Text="{Binding Name}"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" 
+                   Style="{StaticResource Position}" Text="{Binding Positions}"/>
+        <StackPanel Grid.Row="2" Grid.Column="2" Style="{StaticResource BelongStack}" >
+            <Image Source="{Binding ClubLogoPath}" Style="{StaticResource BelongImage}"/>
+            <TextBlock Text="{Binding ClubName}" Style="{StaticResource BelongName}"/>
+            <Image Source="{Binding NationLogoPath}" Style="{StaticResource BelongImage}"/>
+            <TextBlock Text="{Binding NationName}" Style="{StaticResource BelongName}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

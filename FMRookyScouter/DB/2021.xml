@@ -1519,7 +1519,9 @@
   </Player>
   <Player Ability="63" Potential="80">
     <Common Image="//img.fminside.net/facesfm21/83174755.png" Name="Romário Baró" Age="20" Length="180" Weight="66" Role="GoalKeeper" Foot="Right">
-      <Positions />
+      <Positions>
+        <Position>MC</Position>
+      </Positions>
     </Common>
     <Club Image="//img.fminside.net/logos/small/1478.png" Name="FC Porto" />
     <Nation Image="//img.fminside.net/flag-svg/pt.svg" Name="Portugal" />

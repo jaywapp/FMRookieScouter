@@ -13,6 +13,7 @@ namespace FMRookyScouter.View
 
         private Player _selectedPlayer;
 
+        public int MinWidth { get; } = 200;
         public Player SelectedPlayer
         {
             get => _selectedPlayer;
