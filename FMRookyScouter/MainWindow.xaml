@@ -6,40 +6,58 @@
         xmlns:view="clr-namespace:FMRookyScouter.View" xmlns:table="clr-namespace:FMRookyScouter.Control.Stat.Table"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="FM Rooky Scouter" Height="600" Width="1500">
+        Title="FM Rookie Scouter" Height="600" Width="1500">
     <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="Title">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
         <Style TargetType="TextBlock" x:Key="Header">
             <Setter Property="Margin" Value="10, 10, 0, 10"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </Window.Resources>
 
-    <Grid Margin="10">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1.5*"/>
-        </Grid.ColumnDefinitions>
+
+        <!-- Title -->
+        <TextBlock Grid.Row="0" Text="FM ROOKIE SCOUTER" Style="{StaticResource Title}"/>
+
+        <!-- Content -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
 
 
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="Filter" Style="{StaticResource Header}"/>
-        <view:FilterView Grid.Row="1" Grid.Column="0" Margin="10, 0, 10, 0" DataContext="{Binding FilterViewModel}"/>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Filter" Style="{StaticResource Header}"/>
+            <view:FilterView Grid.Row="1" Grid.Column="0" Margin="10, 0, 10, 0" DataContext="{Binding FilterViewModel}"/>
 
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Players" Style="{StaticResource Header}"/>
-        <TabControl Grid.Row="3" Grid.Column="0" Margin="10, 0, 10, 0" ItemsSource="{Binding Tabs}"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Players" Style="{StaticResource Header}"/>
+            <TabControl Grid.Row="3" Grid.Column="0" Margin="10, 0, 10, 0" ItemsSource="{Binding Tabs}"/>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="Stat" Style="{StaticResource Header}"/>
-        <TabControl Grid.Row="1" Grid.RowSpan="3" Grid.Column="1"  Margin="10, 0, 10, 0">
-            <TabItem Header="Graph">
-            </TabItem>
-            <TabItem Header="Table">
-                <table:PlayerStatTableView DataContext="{Binding SelectedPlayer}" />
-            </TabItem>
-        </TabControl>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="Stat" Style="{StaticResource Header}"/>
+            <TabControl Grid.Row="1" Grid.RowSpan="3" Grid.Column="1"  Margin="10, 0, 10, 0">
+                <TabItem Header="Graph">
+                </TabItem>
+                <TabItem Header="Table">
+                    <table:PlayerStatTableView DataContext="{Binding SelectedPlayer}" />
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
+
+   
 </Window>
