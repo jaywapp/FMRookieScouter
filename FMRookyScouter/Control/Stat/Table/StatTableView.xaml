@@ -70,8 +70,8 @@
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="{Binding Name}"/>
-                        <TextBlock Grid.Column="1" TextAlignment="Right" Text="{Binding Value}"/>
+                        <TextBlock Grid.Column="0" FontSize="15" Text="{Binding Name}"/>
+                        <TextBlock Grid.Column="1" FontSize="15" TextAlignment="Right" Text="{Binding Value}"/>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

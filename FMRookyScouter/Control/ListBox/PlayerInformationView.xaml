@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FMRookyScouter.Control.ListBox"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             DataContextChanged="OnDataContextChanged"
+             x:Name="_userControl">
     <UserControl.Resources>
         <Style TargetType="TextBlock" x:Key="Name">
             <Setter Property="FontWeight" Value="Bold"/>
@@ -24,7 +26,7 @@
         </Grid.RowDefinitions>
         
         <!-- 이름 -->
-        <TextBlock Grid.Row="0" Style="{StaticResource Name}" Text="{Binding Common.Name}"/>
+        <TextBlock Grid.Row="0" Style="{StaticResource Name}" Text="{Binding ElementName=_userControl, Path=DisplayName}"/>
         <!-- 포지션 -->
         <local:PositionsView Grid.Row="1" DataContext="{Binding Common.Positions}"/>
         <!-- 소속정보 -->

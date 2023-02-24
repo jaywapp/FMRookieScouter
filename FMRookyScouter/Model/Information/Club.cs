@@ -1,6 +1,4 @@
-﻿using Avalonia.Media.Imaging;
-using FMRookyScouter.Interface;
-using System.Windows.Media.Imaging;
+﻿using FMRookyScouter.Interface;
 using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Information
@@ -42,7 +40,7 @@ namespace FMRookyScouter.Model.Information
         {
             var code = 123781314;
 
-            code ^= Name.GetHashCode();
+            code ^= Name?.GetHashCode() ?? 0;
 
             return code;
         }
