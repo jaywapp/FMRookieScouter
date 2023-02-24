@@ -3,16 +3,43 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:view="clr-namespace:FMRookyScouter.View"
+        xmlns:view="clr-namespace:FMRookyScouter.View" xmlns:table="clr-namespace:FMRookyScouter.Control.Stat.Table"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="FM Rooky Scouter" Height="600" Width="1500">
+    <Window.Resources>
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="Margin" Value="10, 10, 0, 10"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
 
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <view:FilterView Grid.Row="0" DataContext="{Binding FilterViewModel}"/>
-        <TabControl Grid.Row="1" ItemsSource="{Binding Tabs}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Filter" Style="{StaticResource Header}"/>
+        <view:FilterView Grid.Row="1" Grid.Column="0" Margin="10, 0, 10, 0" DataContext="{Binding FilterViewModel}"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Players" Style="{StaticResource Header}"/>
+        <TabControl Grid.Row="3" Grid.Column="0" Margin="10, 0, 10, 0" ItemsSource="{Binding Tabs}"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Stat" Style="{StaticResource Header}"/>
+        <TabControl Grid.Row="1" Grid.RowSpan="3" Grid.Column="1"  Margin="10, 0, 10, 0">
+            <TabItem Header="Graph">
+            </TabItem>
+            <TabItem Header="Table">
+                <table:PlayerStatTableView DataContext="{Binding SelectedPlayer}" />
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

@@ -244,9 +244,7 @@
     <Compile Include="Control\Stat\Table\StatTableView.xaml.cs">
       <DependentUpon>StatTableView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\PlayerAnalysisDialog.xaml.cs">
-      <DependentUpon>PlayerAnalysisDialog.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Event\PlayerSelectedEventArgs.cs" />
     <Compile Include="Helper\BitmapHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Interface\IPlayerFilter.cs" />
@@ -296,10 +294,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Control\Stat\Table\StatTableView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dialog\PlayerAnalysisDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

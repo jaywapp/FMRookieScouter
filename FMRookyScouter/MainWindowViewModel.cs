@@ -1,4 +1,5 @@
 ﻿using FMRookyScouter.Access;
+using FMRookyScouter.Event;
 using FMRookyScouter.Interface;
 using FMRookyScouter.Model;
 using FMRookyScouter.Service;
@@ -15,6 +16,7 @@ namespace FMRookyScouter
     {
         #region Internal Field
         private PlayerFilter _filter;
+        private Player _selectedPlayer;
         #endregion
 
         #region Properties
@@ -22,6 +24,12 @@ namespace FMRookyScouter
         {
             get => _filter;
             set => this.RaiseAndSetIfChanged(ref _filter, value);
+        }
+
+        public Player SelectedPlayer
+        {
+            get => _selectedPlayer;
+            set => this.RaiseAndSetIfChanged(ref _selectedPlayer, value);
         }
         #endregion
 
@@ -49,16 +57,26 @@ namespace FMRookyScouter
                 });
         }
 
-        private static TabItem CreateTabItem(Sesson sesson, PlayerFilter filter)
+        private TabItem CreateTabItem(Sesson sesson, PlayerFilter filter)
         {
             var playersViewModel = new PlayersViewModel(sesson);
             playersViewModel.Filter = filter;
+
+            playersViewModel.PlayerSelected += OnPlayerSelected;
 
             return new TabItem()
             {
                 Header = sesson.Year,
                 Content = new PlayersView() { DataContext = playersViewModel, },
             };
+        }
+
+        private void OnPlayerSelected(object sender, PlayerSelectedEventArgs e)
+        {
+            if (e.Seleted == null)
+                return;
+
+            SelectedPlayer = e.Seleted;
         }
 
         private static bool TryGetViewModel(TabItem tabItem, out PlayersViewModel vm)

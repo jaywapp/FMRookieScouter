@@ -1,13 +1,11 @@
-﻿using FMRookyScouter.Dialog;
+﻿using FMRookyScouter.Event;
 using FMRookyScouter.Interface;
 using FMRookyScouter.Model;
-using Prism.Commands;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
-using System.Windows.Input;
 
 namespace FMRookyScouter.View
 {
@@ -40,8 +38,8 @@ namespace FMRookyScouter.View
         }
         #endregion
 
-        #region Commands
-        public DelegateCommand<MouseButtonEventArgs> DoubleClickCommand { get; }
+        #region Event
+        public EventHandler<PlayerSelectedEventArgs> PlayerSelected;
         #endregion
 
         #region Constructor
@@ -57,12 +55,12 @@ namespace FMRookyScouter.View
                 .Select(filter => Filtering(filter, Players))
                 .BindTo(this, x => x.DisplayPlayers);
 
-            DoubleClickCommand = new DelegateCommand<MouseButtonEventArgs>(DoubleClick);
+            this.WhenAnyValue(x => x.SelectedPlayer)
+                .Subscribe(o => PlayerSelected?.Invoke(this, new PlayerSelectedEventArgs(o)));
         }
-
         #endregion
 
-
+        #region Functions
         private void OnConditionChanged(object sender, EventArgs e)
         {
             if (!(sender is IPlayerFilter filter))
@@ -71,19 +69,10 @@ namespace FMRookyScouter.View
             DisplayPlayers = filter.Filtering(Players).ToList();
         }
 
-        private void DoubleClick(MouseButtonEventArgs e)
-        {
-            if (SelectedPlayer == null)
-                return;
-
-            var dialog = new PlayerAnalysisDialog(SelectedPlayer);
-            if (dialog?.ShowDialog() != true)
-                return;
-        }
-
         private static List<Player> Filtering(IPlayerFilter filter, IEnumerable<Player> sources)
         {
             return filter?.Filtering(sources)?.ToList() ?? sources.ToList();
         }
+        #endregion
     }
 }
