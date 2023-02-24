@@ -4,8 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:control="clr-namespace:FMRookyScouter.Control.ListBox"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
-    <ListBox ItemsSource="{Binding Players}" SelectedItem="{Binding SelectedPlayer}">
+    <ListBox ItemsSource="{Binding DisplayPlayers}" SelectedItem="{Binding SelectedPlayer}">
+        <b:Interaction.Triggers>
+            <b:EventTrigger EventName="MouseDoubleClick">
+                <b:InvokeCommandAction Command="{Binding DoubleClickCommand}" PassEventArgsToCommand="True"/>
+            </b:EventTrigger>
+        </b:Interaction.Triggers>
         <ListBox.ItemTemplate>
             <DataTemplate>
                 <control:PlayerListBoxItemView DataContext="{Binding}"/>

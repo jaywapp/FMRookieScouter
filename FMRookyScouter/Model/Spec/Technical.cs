@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Spec
 {
-    public class Technical : IXElementSerializable
+    public class Technical : IXElementSerializable, IStat
     {
         #region Properties
         public int Corners { get; set; } = 0;

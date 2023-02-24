@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Spec
 {
-    public class Goalkeeping : IXElementSerializable
+    public class Goalkeeping : IXElementSerializable, IStat
     {
         #region Properties
         public int AerialReach { get; set; } = 0;

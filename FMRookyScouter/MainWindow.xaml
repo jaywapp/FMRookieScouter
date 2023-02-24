@@ -6,7 +6,13 @@
         xmlns:view="clr-namespace:FMRookyScouter.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
-        <view:PlayersView DataContext="{Binding PlayersViewModel}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <view:FilterView Grid.Row="0" DataContext="{Binding FilterViewModel}"/>
+        <TabControl Grid.Row="1" ItemsSource="{Binding Tabs}"/>
     </Grid>
 </Window>

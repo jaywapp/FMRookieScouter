@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace FMRookyScouter.Model.Spec
 {
-    public class Mental : IXElementSerializable
+    public class Mental : IXElementSerializable, IStat
     {
         #region Properties
         public int Aggression { get; set; } = 0;

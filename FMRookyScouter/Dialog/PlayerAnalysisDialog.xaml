@@ -1,0 +1,28 @@
+﻿<Window x:Class="FMRookyScouter.Dialog.PlayerAnalysisDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FMRookyScouter.Dialog" xmlns:table="clr-namespace:FMRookyScouter.Control.Stat.Table"
+        mc:Ignorable="d"
+        Title="PlayerAnalysisDialog" Height="450" Width="800"
+        x:Name="_window">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TabControl>
+            <TabItem Header="Graph">
+            </TabItem>
+            <TabItem Header="Table">
+                <table:PlayerStatTableView DataContext="{Binding ElementName=_window, Path=Player}" />
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="100" Margin="10" Content="확인" Click="Confirm"/>
+        </StackPanel>
+    </Grid>
+</Window>

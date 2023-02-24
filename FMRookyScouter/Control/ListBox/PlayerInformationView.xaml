@@ -22,10 +22,12 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
+        <!-- 이름 -->
         <TextBlock Grid.Row="0" Style="{StaticResource Name}" Text="{Binding Common.Name}"/>
-        
+        <!-- 포지션 -->
         <local:PositionsView Grid.Row="1" DataContext="{Binding Common.Positions}"/>
-        
+        <!-- 소속정보 -->
         <StackPanel Grid.Row="2" Style="{StaticResource Stack}" >
             <local:LogoView DataContext="{Binding Club}"/>
             <local:LogoView DataContext="{Binding Nation}"/>

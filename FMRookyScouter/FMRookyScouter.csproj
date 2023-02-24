@@ -130,6 +130,12 @@
     <Reference Include="JetBrains.Annotations, Version=10.3.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
       <HintPath>..\packages\JetBrains.Annotations.10.3.0\lib\net\JetBrains.Annotations.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=8.1.97.5141, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.8.1.97\lib\net47\Prism.dll</HintPath>
+    </Reference>
     <Reference Include="ReactiveUI, Version=18.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ReactiveUI.18.4.22\lib\net472\ReactiveUI.dll</HintPath>
     </Reference>
@@ -226,10 +232,33 @@
     <Compile Include="Control\ListBox\PositionsView.xaml.cs">
       <DependentUpon>PositionsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\Stat\Table\FieldPlayerStatTableView.xaml.cs">
+      <DependentUpon>FieldPlayerStatTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Table\GoalkeepperPlayerStatTableView.xaml.cs">
+      <DependentUpon>GoalkeepperPlayerStatTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Table\PlayerStatTableView.xaml.cs">
+      <DependentUpon>PlayerStatTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Table\StatTableView.xaml.cs">
+      <DependentUpon>StatTableView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\PlayerAnalysisDialog.xaml.cs">
+      <DependentUpon>PlayerAnalysisDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helper\BitmapHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
+    <Compile Include="Interface\IPlayerFilter.cs" />
     <Compile Include="Interface\IImagable.cs" />
+    <Compile Include="Interface\IStat.cs" />
+    <Compile Include="Item\StatUnitItem.cs" />
     <Compile Include="Model\Information\Role.cs" />
+    <Compile Include="Service\PlayerFilter.cs" />
+    <Compile Include="View\FilterView.xaml.cs">
+      <DependentUpon>FilterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FilterViewModel.cs" />
     <Compile Include="View\PlayersView.xaml.cs">
       <DependentUpon>PlayersView.xaml</DependentUpon>
     </Compile>
@@ -254,6 +283,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Control\Stat\Table\FieldPlayerStatTableView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\Stat\Table\GoalkeepperPlayerStatTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Stat\Table\PlayerStatTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Stat\Table\StatTableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialog\PlayerAnalysisDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -270,6 +319,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\FilterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PlayersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -312,7 +365,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Control\Stat\Graph\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="DB\2021.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
