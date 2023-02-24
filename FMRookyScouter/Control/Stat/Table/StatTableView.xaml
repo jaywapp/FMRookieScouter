@@ -16,6 +16,50 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <Grid.Style>
+                            <Style TargetType="Grid">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Value}" Value="5">
+                                        <Setter Property="Background" Value="#38DC143C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="4">
+                                        <Setter Property="Background" Value="#62DC143C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="3">
+                                        <Setter Property="Background" Value="#8cDC143C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="2">
+                                        <Setter Property="Background" Value="#b6DC143C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="1">
+                                        <Setter Property="Background" Value="#d5DC143C"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="0">
+                                        <Setter Property="Background" Value="#FFDC143C"/>
+                                    </DataTrigger>
+
+
+                                    <DataTrigger Binding="{Binding Value}" Value="15">
+                                        <Setter Property="Background" Value="#3898FB98"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="16">
+                                        <Setter Property="Background" Value="#6298FB98"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="17">
+                                        <Setter Property="Background" Value="#8c98FB98"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="18">
+                                        <Setter Property="Background" Value="#b698FB98"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="19">
+                                        <Setter Property="Background" Value="#d598FB98"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="20">
+                                        <Setter Property="Background" Value="#FF98FB98"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Style>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="*"/>
