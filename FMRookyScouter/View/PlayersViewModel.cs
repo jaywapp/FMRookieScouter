@@ -1,22 +1,19 @@
-﻿using FMRookyScouter.Item;
-using FMRookyScouter.Model;
+﻿using FMRookyScouter.Model;
 using ReactiveUI;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FMRookyScouter.View
 {
     public class PlayersViewModel : ReactiveObject
     {
         #region Internal Field
-        private PlayerItem _selectedPlayer;
+        private Player _selectedPlayer;
         #endregion
 
         #region Properties
-        public List<PlayerItem> Players { get; }
+        public List<Player> Players { get; }
 
-        public PlayerItem SelectedPlayer
+        public Player SelectedPlayer
         {
             get => _selectedPlayer;
             set => this.RaiseAndSetIfChanged(ref _selectedPlayer, value);
@@ -26,7 +23,7 @@ namespace FMRookyScouter.View
         #region Constructor
         public PlayersViewModel(Sesson sesson)
         {
-            Players = sesson.Players.Select(p=> new PlayerItem(p)).ToList();
+            Players = sesson.Players;
         }
         #endregion
     }

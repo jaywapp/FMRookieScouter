@@ -1,4 +1,5 @@
-﻿using FMRookyScouter.Interface;
+﻿using FMRookyScouter.Helper;
+using FMRookyScouter.Interface;
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
@@ -8,10 +9,10 @@ namespace FMRookyScouter.Model.Information
     public class Common : IXElementSerializable
     {
         #region Properties
-        public string Image { get; set; } = "";
+        public string Image => GetImagePath(Name);
         public string Name { get; set; } = "";
         public int Age { get; set; } = 0;
-        public double Length { get; set; } = 0;
+        public double Length { get; set; } = 0; 
         public double Weight { get; set; } = 0;
         public ePosition[] Positions { get; set; }
         public List<Role> Roles { get; set; } = new List<Role>();
@@ -19,6 +20,19 @@ namespace FMRookyScouter.Model.Information
         #endregion
 
         #region Functions
+        public string GetPositions()
+        {
+            return string.Join(" / ", Positions);
+        }
+
+        private static string GetImagePath(string name)
+        {
+            var prefix = "/FMRookyScouter;component/Image/Picture";
+            var ext = "png";
+
+            return $"{prefix}/{name.TrimEnglish()}.{ext}";
+        }
+
         public override string ToString() => $"Age : {Age} / L : {Length} / W : {Weight} / Foot : {Foot} / Image : {Image}";
 
         public XElement Save()
@@ -26,7 +40,6 @@ namespace FMRookyScouter.Model.Information
             var element = new XElement(nameof(Common));
 
             element.Add(
-                new XAttribute(nameof(Image), Image ?? ""),
                 new XAttribute(nameof(Name), Name ?? ""),
                 new XAttribute(nameof(Age), Age),
                 new XAttribute(nameof(Length), Length),
@@ -44,8 +57,6 @@ namespace FMRookyScouter.Model.Information
             if (element.Name != nameof(Common))
                 return;
 
-            if (element.TryGetAttributeValue(nameof(Image), out string image))
-                Image = image;
             if (element.TryGetAttributeValue(nameof(Name), out string name))
                 Name = name;
             if (element.TryGetAttributeIntValue(nameof(Age), out int age))
