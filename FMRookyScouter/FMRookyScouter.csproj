@@ -151,6 +151,18 @@
     <Compile Include="Control\ListBox\PositionsView.xaml.cs">
       <DependentUpon>PositionsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\Stat\Graph\FieldPlayerStatGraphView.xaml.cs">
+      <DependentUpon>FieldPlayerStatGraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Graph\GoalkeepperPlayerStatGraphView.xaml.cs">
+      <DependentUpon>GoalkeepperPlayerStatGraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Graph\PlayerStatGraphView.xaml.cs">
+      <DependentUpon>PlayerStatGraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Stat\Graph\StatGraphView.xaml.cs">
+      <DependentUpon>StatGraphView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\Stat\Table\FieldPlayerStatTableView.xaml.cs">
       <DependentUpon>FieldPlayerStatTableView.xaml</DependentUpon>
     </Compile>
@@ -199,6 +211,22 @@
     <Page Include="Control\ListBox\PositionsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\Stat\Graph\FieldPlayerStatGraphView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\Stat\Graph\GoalkeepperPlayerStatGraphView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\Stat\Graph\PlayerStatGraphView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Control\Stat\Graph\StatGraphView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Control\Stat\Table\FieldPlayerStatTableView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -278,9 +306,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\Stat\Graph\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="DB\2021.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
