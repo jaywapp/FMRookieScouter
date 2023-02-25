@@ -201,7 +201,7 @@ namespace FMRookyScouter.Helper
             _alphabetDic.Add('ŕ', "r");
             _alphabetDic.Add('ȓ', "r");
 
-           // S
+            // S
             _alphabetDic.Add('Ş', "S");
             _alphabetDic.Add('Ś', "S");
             _alphabetDic.Add('Š', "S");
@@ -226,7 +226,7 @@ namespace FMRookyScouter.Helper
             _alphabetDic.Add('ť', "t");
             _alphabetDic.Add('ț', "t");
             _alphabetDic.Add('ŧ', "t");
-            
+
             // U
             _alphabetDic.Add('Ŭ', "U");
             _alphabetDic.Add('Ü', "U");
@@ -304,7 +304,7 @@ namespace FMRookyScouter.Helper
 
             foreach (var c in str)
                 builder.Append(_alphabetDic.TryGetValue(c, out string value) ? value : c.ToString());
-         
+
             return builder.ToString();
         }
     }

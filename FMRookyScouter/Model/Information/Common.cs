@@ -12,7 +12,7 @@ namespace FMRookyScouter.Model.Information
         public string Image => GetImagePath(Name);
         public string Name { get; set; } = "";
         public int Age { get; set; } = 0;
-        public double Length { get; set; } = 0; 
+        public double Length { get; set; } = 0;
         public double Weight { get; set; } = 0;
         public ePosition[] Positions { get; set; }
         public List<Role> Roles { get; set; } = new List<Role>();

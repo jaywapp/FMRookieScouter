@@ -24,7 +24,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <!-- 이름 -->
         <TextBlock Grid.Row="0" Style="{StaticResource Name}" Text="{Binding ElementName=_userControl, Path=DisplayName}"/>
         <!-- 포지션 -->

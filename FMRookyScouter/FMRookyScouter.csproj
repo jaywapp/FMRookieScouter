@@ -40,6 +40,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-beta.701" />
     <Reference Include="AdonisUI, Version=1.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AdonisUI.1.17.1\lib\net45\AdonisUI.dll</HintPath>
     </Reference>
@@ -163,6 +164,9 @@
     <Compile Include="Control\Stat\Graph\StatGraphView.xaml.cs">
       <DependentUpon>StatGraphView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\Stat\StatView.xaml.cs">
+      <DependentUpon>StatView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\Stat\Table\FieldPlayerStatTableView.xaml.cs">
       <DependentUpon>FieldPlayerStatTableView.xaml</DependentUpon>
     </Compile>
@@ -176,7 +180,6 @@
       <DependentUpon>StatTableView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Event\PlayerSelectedEventArgs.cs" />
-    <Compile Include="Helper\BitmapHelper.cs" />
     <Compile Include="Helper\StringHelper.cs" />
     <Compile Include="Interface\IPlayerFilter.cs" />
     <Compile Include="Interface\IImagable.cs" />
@@ -188,6 +191,10 @@
       <DependentUpon>FilterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\FilterViewModel.cs" />
+    <Compile Include="View\PlayerStatView.xaml.cs">
+      <DependentUpon>PlayerStatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlayerStatViewModel.cs" />
     <Compile Include="View\PlayersView.xaml.cs">
       <DependentUpon>PlayersView.xaml</DependentUpon>
     </Compile>
@@ -228,6 +235,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Control\Stat\StatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\Stat\Table\FieldPlayerStatTableView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -261,6 +272,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\FilterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PlayerStatView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

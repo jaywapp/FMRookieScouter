@@ -1,21 +1,8 @@
-﻿using FMRookyScouter.Control.Stat.Table;
-using FMRookyScouter.Model;
-using System;
-using System.Collections.Generic;
+﻿using FMRookyScouter.Model;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace FMRookyScouter.Control.Stat.Graph
 {
@@ -33,16 +20,39 @@ namespace FMRookyScouter.Control.Stat.Graph
         #endregion
 
         #region Internal Field
-        private UserControl _view;
+        private Player _player;
+
+        private Visibility _fieldPlayerVisibility = Visibility.Collapsed;
+        private Visibility _goalkeeperVisibility = Visibility.Collapsed;
         #endregion
 
         #region Properties
-        public UserControl View
+        public Player Player
         {
-            get => _view;
+            get => _player;
             set
             {
-                _view = value;
+                _player = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public Visibility FieldPlayerVisibility
+        {
+            get => _fieldPlayerVisibility;
+            set
+            {
+                _fieldPlayerVisibility = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public Visibility GoalkeeperVisibility
+        {
+            get => _goalkeeperVisibility;
+            set
+            {
+                _goalkeeperVisibility = value;
                 RaisePropertyChanged();
             }
         }
@@ -61,15 +71,10 @@ namespace FMRookyScouter.Control.Stat.Graph
             if (!(e.NewValue is Player player))
                 return;
 
-            View = GetView(player);
-        }
+            Player = player;
 
-        private static UserControl GetView(Player player)
-        {
-            if (player.Goalkeeping.IsGoalkeepper())
-                return new GoalkeepperPlayerStatGraphView() { DataContext = player };
-            else
-                return new FieldPlayerStatGraphView() { DataContext = player };
+            FieldPlayerVisibility = player.Goalkeeping.IsGoalkeepper() ? Visibility.Collapsed : Visibility.Visible;
+            GoalkeeperVisibility = player.Goalkeeping.IsGoalkeepper() ? Visibility.Visible : Visibility.Collapsed;
         }
         #endregion
     }

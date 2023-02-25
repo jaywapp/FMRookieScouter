@@ -73,7 +73,7 @@ namespace FMRookyScouter.Interface
 
             var properties = type.GetProperties();
 
-            foreach(var property in properties)
+            foreach (var property in properties)
             {
                 if (!element.TryGetAttributeIntValue(property.Name, out int value))
                     continue;

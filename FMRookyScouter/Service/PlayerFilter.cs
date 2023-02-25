@@ -29,7 +29,7 @@ namespace FMRookyScouter.Service
             if (string.IsNullOrEmpty(NamePattern))
                 return sources;
 
-            return sources.Where(s=> s.Common.Name.Contains(NamePattern)).ToList();
+            return sources.Where(s => s.Common.Name.Contains(NamePattern)).ToList();
         }
     }
 }

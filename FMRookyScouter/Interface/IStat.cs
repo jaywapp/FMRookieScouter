@@ -13,7 +13,7 @@ namespace FMRookyScouter.Interface
         {
             var properties = stat.GetType().GetProperties();
 
-            foreach(var property in properties)
+            foreach (var property in properties)
             {
                 var value = property.GetValue(stat);
                 if (!(value is int intValue))
@@ -27,7 +27,4 @@ namespace FMRookyScouter.Interface
             }
         }
     }
-
-
-
 }

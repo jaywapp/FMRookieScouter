@@ -1,5 +1,8 @@
 ﻿using FMRookyScouter.Interface;
 using FMRookyScouter.Item;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
 using SkiaSharp;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +26,45 @@ namespace FMRookyScouter.Control.Stat.Graph
         }
         #endregion
 
+        #region Internal Field
+        private string _title;
+
+        private ISeries[] _series;
+        private PolarAxis[] _angleAxes;
+        #endregion
+
+        #region Properties
+        public string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public ISeries[] Series
+        {
+            get => _series;
+            set
+            {
+                _series = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        public PolarAxis[] AngleAxes
+        {
+            get => _angleAxes;
+            set
+            {
+                _angleAxes = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
         #region Constructor
         public StatGraphView()
         {
@@ -37,6 +79,31 @@ namespace FMRookyScouter.Control.Stat.Graph
                 return;
 
             var items = stat.GetItems().ToList();
+
+            Title = stat.GetType().Name;
+
+            Series = CreateSeries(items).ToArray();
+            AngleAxes = CreateAxis(items).ToArray();
+        }
+
+        private static IEnumerable<ISeries> CreateSeries(List<StatUnitItem> items)
+        {
+            yield return new PolarLineSeries<int>
+            {
+                Values = items.Select(i => i.Value).ToArray(),
+                LineSmoothness = 0,
+                GeometrySize = 0,
+                Fill = new SolidColorPaint(SKColors.Blue.WithAlpha(90)),
+            };
+        }
+
+        private static IEnumerable<PolarAxis> CreateAxis(List<StatUnitItem> items)
+        {
+            yield return new PolarAxis
+            {
+                LabelsRotation = LiveCharts.TangentAngle,
+                Labels = items.Select(i => i.Name).ToArray(),
+            };
         }
         #endregion
     }
