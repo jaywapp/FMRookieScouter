@@ -6,12 +6,20 @@
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800"
              DataContextChanged="OnDataContextChanged"
              x:Name="_userControl">
-    <ListBox Margin="10" ItemsSource="{Binding ElementName=_userControl, Path=Items}" HorizontalContentAlignment="Stretch">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock" x:Key="Content">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <ListBox Margin="10" ItemsSource="{Binding ElementName=_userControl, Path=Items}" 
+             HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
         <ListBox.ItemContainerStyle>
             <Style TargetType="ListBoxItem">
                 <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                <Setter Property="Height" Value="35"/>
             </Style>
-
         </ListBox.ItemContainerStyle>
         <ListBox.ItemTemplate>
             <DataTemplate>
@@ -61,11 +69,11 @@
                         </Style>
                     </Grid.Style>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" FontSize="15" Text="{Binding Name}"/>
-                    <TextBlock Grid.Column="1" FontSize="15" TextAlignment="Right" Text="{Binding Value}"/>
+                    <TextBlock Grid.Column="0" Style="{StaticResource Content}" Text="{Binding Name}"/>
+                    <TextBlock Grid.Column="1" TextAlignment="Right" Style="{StaticResource Content}" Text="{Binding Value}"/>
                 </Grid>
             </DataTemplate>
         </ListBox.ItemTemplate>
