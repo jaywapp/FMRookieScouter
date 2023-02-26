@@ -15,7 +15,7 @@
         <!-- 프로필 사진 -->
         <Image Grid.Column="0" Width="60" Source="{Binding Common.Image}"/>
         <!-- 잠재력 / 능력 -->
-        <local:PlayerPotentialAbilityView Grid.Column="1" Margin="10, 0, 10, 0" DataContext="{Binding}"/>
+        <local:PlayerPotentialAbilityView Grid.Column="1" Margin="10, 0, 10, 0" DataContext="{Binding Common}"/>
         <!-- 선수 기본 정보 -->
         <local:PlayerInformationView Grid.Column="2"  DataContext="{Binding}"/>
     </Grid>

@@ -9,14 +9,16 @@ namespace FMRookyScouter.Model.Information
     public class Common : IXElementSerializable
     {
         #region Properties
-        public string Image => GetImagePath(Name);
         public string Name { get; set; } = "";
         public int Age { get; set; } = 0;
+        public int Ability { get; set; } = 0;
+        public int Potential { get; set; } = 0;
         public double Length { get; set; } = 0;
         public double Weight { get; set; } = 0;
         public ePosition[] Positions { get; set; }
         public List<Role> Roles { get; set; } = new List<Role>();
         public eFoot Foot { get; set; }
+        public string Image => GetImagePath(Name);
         #endregion
 
         #region Functions
@@ -44,6 +46,8 @@ namespace FMRookyScouter.Model.Information
                 new XAttribute(nameof(Age), Age),
                 new XAttribute(nameof(Length), Length),
                 new XAttribute(nameof(Weight), Weight),
+                new XAttribute(nameof(Ability), Ability),
+                new XAttribute(nameof(Potential), Potential),
                 new XAttribute(nameof(Foot), Foot));
 
             element.Add(SavePositions());
@@ -65,6 +69,10 @@ namespace FMRookyScouter.Model.Information
                 Length = length;
             if (element.TryGetAttributeDoubleValue(nameof(Weight), out double weight))
                 Weight = weight;
+            if(element.TryGetAttributeIntValue(nameof(Ability), out int ability))
+                Ability = ability;
+            if(element.TryGetAttributeIntValue(nameof(Potential), out int potential))
+                Potential = potential;
             if (element.TryGetAttributeEnumValue(nameof(Foot), out eFoot foot))
                 Foot = foot;
 
