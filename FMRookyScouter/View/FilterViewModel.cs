@@ -1,30 +1,76 @@
-﻿using FMRookyScouter.Service;
+﻿using FMRookyScouter.Dialog;
+using FMRookyScouter.Interface;
+using FMRookyScouter.Service.Filter;
 using Prism.Commands;
 using ReactiveUI;
-using System;
-using System.Windows.Controls;
 
 namespace FMRookyScouter.View
 {
     public class FilterViewModel : ReactiveObject
     {
+        private IPlayerFilterPattern _selectedPattern;
+
         public PlayerFilter Filter { get; }
 
-        public DelegateCommand<TextChangedEventArgs> OnTextChangedCommand { get; }
+        public IPlayerFilterPattern SelectedPattern
+        {
+            get => _selectedPattern;
+            set => this.RaiseAndSetIfChanged(ref _selectedPattern, value);
+        }
+
+        public DelegateCommand AddCommand { get; }
+        public DelegateCommand DeleteCommand { get; }
+        public DelegateCommand ModifyCommand { get; }
+        public DelegateCommand ClearCommand { get; }
 
         public FilterViewModel(PlayerFilter filter)
         {
             Filter = filter;
+            Filter.Patterns.ListChanged += (o, s) => Fetch();
 
-            OnTextChangedCommand = new DelegateCommand<TextChangedEventArgs>(OnTextChanged);
+            AddCommand = new DelegateCommand(Add);
+            DeleteCommand = new DelegateCommand(Delete);
+            ModifyCommand = new DelegateCommand(Modify);
+            ClearCommand = new DelegateCommand(Clear);
         }
 
-        private void OnTextChanged(TextChangedEventArgs args)
+        private void Fetch()
         {
-            if (!(args.Source is TextBox textBox))
+            this.RaisePropertyChanged(nameof(Filter.Patterns));
+        }
+
+        private void Add()
+        {
+            var dialog = new ConfiguratePatternDialog();
+            if (dialog?.ShowDialog() != true)
                 return;
 
-            Filter.NamePattern = textBox.Text;
+            Filter.Patterns.Add(dialog.Pattern);
+        }
+
+        private void Delete()
+        {
+            if (SelectedPattern == null)
+                return;
+
+            Filter.Patterns.Remove(SelectedPattern);
+        }
+
+        private void Modify()
+        {
+            if (SelectedPattern == null)
+                return;
+
+            var dialog = new ConfiguratePatternDialog(SelectedPattern);
+            if (dialog?.ShowDialog() != true)
+                return;
+
+            Fetch();
+        }
+
+        private void Clear()
+        {
+            Filter.Patterns.Clear();
         }
     }
 }

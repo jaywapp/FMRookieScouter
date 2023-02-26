@@ -1,6 +1,7 @@
 ﻿using FMRookyScouter.Event;
 using FMRookyScouter.Interface;
 using FMRookyScouter.Model;
+using FMRookyScouter.Service.Filter;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace FMRookyScouter.View
         #region Internal Field
         private Player _selectedPlayer;
         private List<Player> _displayPlayers;
-        private IPlayerFilter _filter;
+        private PlayerFilter _filter;
         #endregion
 
         #region Properties
@@ -31,7 +32,7 @@ namespace FMRookyScouter.View
             set => this.RaiseAndSetIfChanged(ref _selectedPlayer, value);
         }
 
-        public IPlayerFilter Filter
+        public PlayerFilter Filter
         {
             get => _filter;
             set => this.RaiseAndSetIfChanged(ref _filter, value);
@@ -49,7 +50,7 @@ namespace FMRookyScouter.View
 
             this.WhenAnyValue(x => x.Filter)
                 .Where(filter => filter != null)
-                .Subscribe(filter => filter.ConditionChanged += OnConditionChanged);
+                .Subscribe(filter => filter.ContentChanged += OnFilterChanged);
 
             this.WhenAnyValue(x => x.Filter)
                 .Select(filter => Filtering(filter, Players))
@@ -61,15 +62,15 @@ namespace FMRookyScouter.View
         #endregion
 
         #region Functions
-        private void OnConditionChanged(object sender, EventArgs e)
+        private void OnFilterChanged(object sender, EventArgs e)
         {
-            if (!(sender is IPlayerFilter filter))
+            if (!(sender is PlayerFilter filter))
                 return;
 
             DisplayPlayers = filter.Filtering(Players).ToList();
         }
 
-        private static List<Player> Filtering(IPlayerFilter filter, IEnumerable<Player> sources)
+        private static List<Player> Filtering(PlayerFilter filter, IEnumerable<Player> sources)
         {
             return filter?.Filtering(sources)?.ToList() ?? sources.ToList();
         }

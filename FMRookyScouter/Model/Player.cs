@@ -1,6 +1,8 @@
 ﻿using FMRookyScouter.Interface;
 using FMRookyScouter.Model.Information;
 using FMRookyScouter.Model.Spec;
+using System;
+using System.Reflection;
 using System.Xml.Linq;
 
 namespace FMRookyScouter.Model

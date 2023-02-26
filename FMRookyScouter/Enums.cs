@@ -118,4 +118,13 @@ namespace FMRookyScouter
         [Simply("F9")]
         FalseNine,
     }
+
+    public enum eOperator
+    {
+        GreaterThan,
+        GreaterEqual,
+        LessThan,
+        LessEqual,
+        Equals,
+    }
 }

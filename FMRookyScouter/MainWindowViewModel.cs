@@ -2,6 +2,7 @@
 using FMRookyScouter.Event;
 using FMRookyScouter.Model;
 using FMRookyScouter.Service;
+using FMRookyScouter.Service.Filter;
 using FMRookyScouter.View;
 using ReactiveUI;
 using System;

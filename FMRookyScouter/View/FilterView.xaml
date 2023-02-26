@@ -3,24 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"  Grid.Column="0" Text="이름"/>
-        <TextBox Grid.Row="0"  Grid.Column="1">
-            <b:Interaction.Triggers>
-                <b:EventTrigger EventName="TextChanged">
-                    <b:InvokeCommandAction Command="{Binding OnTextChangedCommand}" PassEventArgsToCommand="True"/>
-                </b:EventTrigger>
-            </b:Interaction.Triggers>
-        </TextBox>
+
+        <StackPanel Grid.Row="0" Margin="0, 5, 0, 5" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Content="Add" Width="100" Margin="5, 0, 5, 0" Command="{Binding AddCommand}"/>
+            <Button Content="Delete" Width="100" Margin="5, 0, 5, 0" Command="{Binding DeleteCommand}"/>
+            <Button Content="Modify" Width="100" Margin="5, 0, 5, 0" Command="{Binding ModifyCommand}"/>
+            <Button Content="Clear" Width="100" Margin="5, 0, 5, 0" Command="{Binding ClearCommand}"/>
+        </StackPanel>
+
+        <ListBox Grid.Row="1" ItemsSource="{Binding Filter.Patterns}" SelectedItem="{Binding SelectedPattern}">
+        </ListBox>
     </Grid>
 </UserControl>

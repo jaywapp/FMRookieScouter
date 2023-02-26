@@ -40,14 +40,14 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="20"/>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="1.5*"/>
             </Grid.ColumnDefinitions>
 
@@ -57,8 +57,8 @@
 
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Players" Style="{StaticResource Header}"/>
             <TabControl Grid.Row="4" Grid.Column="0" ItemsSource="{Binding PlayerTabs}"/>
-            <TextBlock Grid.Row="3" Grid.Column="2" Text="Stat" Style="{StaticResource Header}"/>
-            <view:PlayerStatView Grid.Row="4" Grid.Column="2" DataContext="{Binding PlayerStatViewModel}"/>
+            <TextBlock Grid.Row="0" Grid.Column="2" Text="Stat" Style="{StaticResource Header}"/>
+            <view:PlayerStatView Grid.Row="1" Grid.RowSpan="4" Grid.Column="2" DataContext="{Binding PlayerStatViewModel}"/>
         </Grid>
     </Grid>
 
