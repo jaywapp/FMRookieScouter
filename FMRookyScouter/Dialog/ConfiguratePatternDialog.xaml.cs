@@ -18,37 +18,19 @@ namespace FMRookyScouter.Dialog
         }
         #endregion
 
-        private string _target;
-        private string _value;
-
-        public string Target
-        {
-            get => _target;
-            set
-            {
-                _target = value;
-                RaisePropertyChanged();
-            }
-        }
-
-        public string Value
-        {
-            get => _value;
-            set
-            {
-                _value = value;
-                RaisePropertyChanged();
-            }
-        }
-
+        #region Properties
         public IPlayerFilterPattern Pattern { get; private set; }
+        #endregion
 
+        #region Constructor
         public ConfiguratePatternDialog(IPlayerFilterPattern pattern = null)
         {
             Pattern = pattern;
             InitializeComponent();
         }
+        #endregion
 
+        #region Functions
         private void Submit(object sender, RoutedEventArgs e)
         {
             DialogResult = true;
@@ -60,5 +42,6 @@ namespace FMRookyScouter.Dialog
             DialogResult = false;
             Close();
         }
+        #endregion
     }
 }
