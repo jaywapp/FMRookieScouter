@@ -127,4 +127,16 @@ namespace FMRookyScouter
         LessEqual,
         Equals,
     }
+
+    public enum eMainCategory
+    {
+        Common,
+        Belong,
+        Part,
+        Possibility,
+        Mental,
+        Phisycal,
+        Technical,
+        Goalkeeping,
+    }
 }

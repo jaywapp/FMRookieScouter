@@ -12,6 +12,8 @@ namespace FMRookyScouter.Model.Information
         #endregion
 
         #region Functions
+        public override string ToString() => $"{Type} ({Value})";
+
         public void Load(XElement element)
         {
             if (element.Name != nameof(Role))

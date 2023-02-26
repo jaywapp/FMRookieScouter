@@ -137,6 +137,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Control\Belong\RolesView.xaml.cs">
+      <DependentUpon>RolesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Control\Filter\FilterPatternView.xaml.cs">
       <DependentUpon>FilterPatternView.xaml</DependentUpon>
     </Compile>
@@ -185,13 +188,10 @@
     <Compile Include="Control\Stat\Table\StatTableView.xaml.cs">
       <DependentUpon>StatTableView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dialog\ConfiguratePatternDialog.xaml.cs">
-      <DependentUpon>ConfiguratePatternDialog.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Event\PlayerSelectedEventArgs.cs" />
     <Compile Include="Helper\StringHelper.cs" />
-    <Compile Include="Interface\IPlayerFilterPattern.cs" />
     <Compile Include="Interface\IStat.cs" />
+    <Compile Include="Item\PatternItem.cs" />
     <Compile Include="Item\StatUnitItem.cs" />
     <Compile Include="Model\Information\Belong.cs" />
     <Compile Include="Model\Information\Role.cs" />
@@ -210,6 +210,10 @@
       <DependentUpon>PlayersView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\PlayersViewModel.cs" />
+    <Page Include="Control\Belong\RolesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control\Filter\FilterPatternView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -271,10 +275,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Control\Stat\Table\StatTableView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Dialog\ConfiguratePatternDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -344,7 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Control\Filter\Detail\" />
-    <Folder Include="Service\Pattern\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\2021.xml">

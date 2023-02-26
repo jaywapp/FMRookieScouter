@@ -50,7 +50,7 @@ namespace FMRookyScouter.View
 
             this.WhenAnyValue(x => x.Filter)
                 .Where(filter => filter != null)
-                .Subscribe(filter => filter.ContentChanged += OnFilterChanged);
+                .Subscribe(filter => filter.ConditionChanged += OnFilterChanged);
 
             this.WhenAnyValue(x => x.Filter)
                 .Select(filter => Filtering(filter, Players))

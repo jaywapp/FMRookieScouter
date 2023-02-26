@@ -1,4 +1,5 @@
-﻿using FMRookyScouter.Control.Stat;
+﻿using FMRookyScouter.Control.Belong;
+using FMRookyScouter.Control.Stat;
 using FMRookyScouter.Model;
 using ReactiveUI;
 using System.Collections.Generic;
@@ -37,6 +38,12 @@ namespace FMRookyScouter.View
         #region Functions
         private static IEnumerable<TabItem> CreateStatTabItems(Player player)
         {
+            yield return new TabItem()
+            {
+                Header = "Role",
+                Content = new RolesView() { DataContext = player.Part.Roles },
+            };
+
             if (player.Goalkeeping.IsGoalkeepper())
             {
                 yield return new TabItem()

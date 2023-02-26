@@ -1,28 +1,32 @@
-﻿using FMRookyScouter.Interface;
-using FMRookyScouter.Model;
+﻿using FMRookyScouter.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 
 namespace FMRookyScouter.Service.Filter
 {
-    public class PlayerFilter 
+    public class PlayerFilter
     {
-        public EventHandler ContentChanged;
+        public event EventHandler ConditionChanged;
 
-        public BindingList<IPlayerFilterPattern> Patterns { get; } = new BindingList<IPlayerFilterPattern>();
+        private string _namePattern;
 
-        public PlayerFilter()
+        public string NamePattern
         {
+            get => _namePattern;
+            set
+            {
+                _namePattern = value;
+                ConditionChanged?.Invoke(this, EventArgs.Empty);
+            }
         }
 
         public IEnumerable<Player> Filtering(IEnumerable<Player> sources)
         {
-            if (Patterns == null || !Patterns.Any())
+            if (string.IsNullOrEmpty(NamePattern))
                 return sources;
 
-            return sources.Where(src => Patterns.All(p => p.IsMatched(src)));
+            return sources.Where(s => s.Common.Name.Contains(NamePattern)).ToList();
         }
     }
 }

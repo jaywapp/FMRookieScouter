@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using FMRookyScouter.Helper;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 
@@ -45,7 +46,7 @@ namespace FMRookyScouter.Control.ListBox
             if (!(e.NewValue is string name))
                 return;
 
-            ImageSource = $"/FMRookyScouter;component/Image/Logo/{name}.png";
+            ImageSource = $"/FMRookyScouter;component/Image/Logo/{name.TrimEnglish()}.png";
         }
     }
 }
