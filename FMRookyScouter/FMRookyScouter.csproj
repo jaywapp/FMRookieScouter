@@ -190,7 +190,6 @@
     </Compile>
     <Compile Include="Event\PlayerSelectedEventArgs.cs" />
     <Compile Include="Helper\StringHelper.cs" />
-    <Compile Include="Interface\IImagable.cs" />
     <Compile Include="Interface\IPlayerFilterPattern.cs" />
     <Compile Include="Interface\IStat.cs" />
     <Compile Include="Item\StatUnitItem.cs" />

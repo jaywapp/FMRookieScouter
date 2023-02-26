@@ -3,9 +3,7 @@ using System.Collections.Generic;
 
 namespace FMRookyScouter.Interface
 {
-    public interface IStat
-    {
-    }
+    public interface IStat { }
 
     public static class StatExt
     {
