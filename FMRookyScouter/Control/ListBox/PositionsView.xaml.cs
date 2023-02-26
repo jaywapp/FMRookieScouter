@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,17 +35,21 @@ namespace FMRookyScouter.Control.ListBox
         }
         #endregion
 
+        #region Constructor
         public PositionsView()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Functions
         private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (!(e.NewValue is ePosition[] value))
+            if (!(e.NewValue is List<ePosition> positions))
                 return;
 
-            DisplayPositions = string.Join(" / ", value);
+            DisplayPositions = string.Join(" / ", positions);
         }
+        #endregion
     }
 }

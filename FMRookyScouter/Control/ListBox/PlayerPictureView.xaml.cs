@@ -1,13 +1,15 @@
-﻿using System.ComponentModel;
+﻿using FMRookyScouter.Helper;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace FMRookyScouter.Control.ListBox
 {
     /// <summary>
-    /// LogoView.xaml에 대한 상호 작용 논리
+    /// PlayerPictureView.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class LogoView : UserControl, INotifyPropertyChanged
+    public partial class PlayerPictureView : UserControl, INotifyPropertyChanged
     {
         #region Property Changed
         public event PropertyChangedEventHandler PropertyChanged;
@@ -34,18 +36,20 @@ namespace FMRookyScouter.Control.ListBox
         #endregion
 
         #region Constructor
-        public LogoView()
+        public PlayerPictureView()
         {
             InitializeComponent();
         }
         #endregion
 
-        private void OnDataContextChanged(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
+        #region Functions
+        private void OnDataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             if (!(e.NewValue is string name))
                 return;
 
-            ImageSource = $"/FMRookyScouter;component/Image/Logo/{name}.png";
+            ImageSource = $"/FMRookyScouter;component/Image/Picture/{name.TrimEnglish()}.png";
         }
+        #endregion
     }
 }

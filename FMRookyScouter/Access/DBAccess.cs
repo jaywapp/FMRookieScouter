@@ -55,32 +55,6 @@ namespace FMRookyScouter.Access
 
             return sesson;
         }
-
-        public List<Player> GetPlayers(int year)
-        {
-            return GetSesson(year)?.Players ?? new List<Player>();
-        }
-
-        public IDictionary<int, Player> GetPlayers(string name)
-        {
-            var dic = new Dictionary<int, Player>();
-
-            foreach (var sesson in Sessons.Values)
-            {
-                var player = sesson.GetPlayer(name);
-                if (player == null)
-                    continue;
-
-                dic.Add(sesson.Year, player);
-            }
-
-            return dic;
-        }
-
-        public Player GetPlayer(int year, string name)
-        {
-            return GetSesson(year)?.GetPlayer(name);
-        }
         #endregion
     }
 }

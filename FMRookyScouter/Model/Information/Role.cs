@@ -6,9 +6,12 @@ namespace FMRookyScouter.Model.Information
 {
     public class Role : IXElementSerializable
     {
+        #region Properties
         public eRole Type { get; set; }
         public double Value { get; set; }
+        #endregion
 
+        #region Functions
         public void Load(XElement element)
         {
             if (element.Name != nameof(Role))
@@ -30,5 +33,6 @@ namespace FMRookyScouter.Model.Information
 
             return element;
         }
+        #endregion
     }
 }

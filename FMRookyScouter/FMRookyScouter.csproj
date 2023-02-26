@@ -149,8 +149,11 @@
     <Compile Include="Control\ListBox\PlayerListBoxItemView.xaml.cs">
       <DependentUpon>PlayerListBoxItemView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\ListBox\PlayerPotentialAbilityView.xaml.cs">
-      <DependentUpon>PlayerPotentialAbilityView.xaml</DependentUpon>
+    <Compile Include="Control\ListBox\PlayerPictureView.xaml.cs">
+      <DependentUpon>PlayerPictureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ListBox\PossibilityView.xaml.cs">
+      <DependentUpon>PossibilityView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\ListBox\PositionsView.xaml.cs">
       <DependentUpon>PositionsView.xaml</DependentUpon>
@@ -191,8 +194,10 @@
     <Compile Include="Interface\IPlayerFilterPattern.cs" />
     <Compile Include="Interface\IStat.cs" />
     <Compile Include="Item\StatUnitItem.cs" />
+    <Compile Include="Model\Information\Belong.cs" />
     <Compile Include="Model\Information\Role.cs" />
-    <Compile Include="Model\Property.cs" />
+    <Compile Include="Model\Information\Part.cs" />
+    <Compile Include="Model\Spec\Possibility.cs" />
     <Compile Include="Service\Filter\PlayerFilter.cs" />
     <Compile Include="View\FilterView.xaml.cs">
       <DependentUpon>FilterView.xaml</DependentUpon>
@@ -222,7 +227,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Control\ListBox\PlayerPotentialAbilityView.xaml">
+    <Page Include="Control\ListBox\PlayerPictureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ListBox\PossibilityView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -306,9 +315,7 @@
     <Compile Include="Model\Spec\Mental.cs" />
     <Compile Include="Model\Spec\Physical.cs" />
     <Compile Include="Model\Spec\Technical.cs" />
-    <Compile Include="Model\Information\Club.cs" />
     <Compile Include="Model\Information\Common.cs" />
-    <Compile Include="Model\Information\Nation.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -350,829 +357,829 @@
     <Content Include="DB\2023.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\1. FC Koln.png">
+    <Content Include="Image\Logo\1. FC Koln.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AC Milan.png">
+    <Content Include="Image\Logo\AC Milan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Ajax.png">
+    <Content Include="Image\Logo\Ajax.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Alaves.png">
+    <Content Include="Image\Logo\Alaves.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Almeria.png">
+    <Content Include="Image\Logo\Almeria.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Altinordu.png">
+    <Content Include="Image\Logo\Altinordu.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Anderlecht.png">
+    <Content Include="Image\Logo\Anderlecht.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Antwerp.png">
+    <Content Include="Image\Logo\Antwerp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Arsenal.png">
+    <Content Include="Image\Logo\Arsenal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AS Monaco.png">
+    <Content Include="Image\Logo\AS Monaco.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AS PAOK Salonika.png">
+    <Content Include="Image\Logo\AS PAOK Salonika.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AS Roma.png">
+    <Content Include="Image\Logo\AS Roma.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AS Saint-Etienne.png">
+    <Content Include="Image\Logo\AS Saint-Etienne.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Asociacion Atletica Argentinos Juniors.png">
+    <Content Include="Image\Logo\Asociacion Atletica Argentinos Juniors.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Atalanta.png">
+    <Content Include="Image\Logo\Atalanta.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Athletic Bilbao.png">
+    <Content Include="Image\Logo\Athletic Bilbao.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Athletico Paranaense.png">
+    <Content Include="Image\Logo\Athletico Paranaense.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Atlanta United F.C.png">
+    <Content Include="Image\Logo\Atlanta United F.C.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Atletico Madrid.png">
+    <Content Include="Image\Logo\Atletico Madrid.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Atletico Mineiro.png">
+    <Content Include="Image\Logo\Atletico Mineiro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AZ Alkmaar.png">
+    <Content Include="Image\Logo\AZ Alkmaar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\AZ.png">
+    <Content Include="Image\Logo\AZ.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Bayer Leverkusen.png">
+    <Content Include="Image\Logo\Bayer Leverkusen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Beerschot.png">
+    <Content Include="Image\Logo\Beerschot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Benfica.png">
+    <Content Include="Image\Logo\Benfica.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Birmingham.png">
+    <Content Include="Image\Logo\Birmingham.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Blackburn Rovers.png">
+    <Content Include="Image\Logo\Blackburn Rovers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Blackpool.png">
+    <Content Include="Image\Logo\Blackpool.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Boavista Futebol Clube - SAD.png">
+    <Content Include="Image\Logo\Boavista Futebol Clube - SAD.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Bologna FC 1909.png">
+    <Content Include="Image\Logo\Bologna FC 1909.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Bologna.png">
+    <Content Include="Image\Logo\Bologna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Bordeaux.png">
+    <Content Include="Image\Logo\Bordeaux.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Borussia Dortmund.png">
+    <Content Include="Image\Logo\Borussia Dortmund.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Brentford.png">
+    <Content Include="Image\Logo\Brentford.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Brescia.png">
+    <Content Include="Image\Logo\Brescia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Brest.png">
+    <Content Include="Image\Logo\Brest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Brighton and Hove Albion.png">
+    <Content Include="Image\Logo\Brighton and Hove Albion.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Brighton.png">
+    <Content Include="Image\Logo\Brighton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Bristol City.png">
+    <Content Include="Image\Logo\Bristol City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Burnley.png">
+    <Content Include="Image\Logo\Burnley.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Cagliari.png">
+    <Content Include="Image\Logo\Cagliari.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\CD Guadalajara.png">
+    <Content Include="Image\Logo\CD Guadalajara.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Celta de Vigo.png">
+    <Content Include="Image\Logo\Celta de Vigo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Celtic.png">
+    <Content Include="Image\Logo\Celtic.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Centro Atletico Fenix.png">
+    <Content Include="Image\Logo\Centro Atletico Fenix.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Chelsea FC.png">
+    <Content Include="Image\Logo\Chelsea FC.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Chicago Fire.png">
+    <Content Include="Image\Logo\Chicago Fire.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Atletico Independiente.png">
+    <Content Include="Image\Logo\Club Atletico Independiente.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Atletico Lanus.png">
+    <Content Include="Image\Logo\Club Atletico Lanus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Atletico River Plate %28Montevideo%29.png">
+    <Content Include="Image\Logo\Club Atletico River Plate %28Montevideo%29.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Atletico San Lorenzo de Almagro.png">
+    <Content Include="Image\Logo\Club Atletico San Lorenzo de Almagro.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Atletico Velez Sarsfield.png">
+    <Content Include="Image\Logo\Club Atletico Velez Sarsfield.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Brugge KV.png">
+    <Content Include="Image\Logo\Club Brugge KV.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club Brugge.png">
+    <Content Include="Image\Logo\Club Brugge.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Club de Regatas Vasco da Gama.png">
+    <Content Include="Image\Logo\Club de Regatas Vasco da Gama.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Colon.png">
+    <Content Include="Image\Logo\Colon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Corinthians.png">
+    <Content Include="Image\Logo\Corinthians.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Crotone.png">
+    <Content Include="Image\Logo\Crotone.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Crystal Palace.png">
+    <Content Include="Image\Logo\Crystal Palace.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Cadiz.png">
+    <Content Include="Image\Logo\Cadiz.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Dinamo Moscow.png">
+    <Content Include="Image\Logo\Dinamo Moscow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Dinamo Zagreb.png">
+    <Content Include="Image\Logo\Dinamo Zagreb.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Dortmund.png">
+    <Content Include="Image\Logo\Dortmund.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\DSC Arminia Bielefeld.png">
+    <Content Include="Image\Logo\DSC Arminia Bielefeld.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Dynamo Kyiv.png">
+    <Content Include="Image\Logo\Dynamo Kyiv.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Eibar.png">
+    <Content Include="Image\Logo\Eibar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Empoli.png">
+    <Content Include="Image\Logo\Empoli.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Envigado F.C..png">
+    <Content Include="Image\Logo\Envigado F.C..png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Everton.png">
+    <Content Include="Image\Logo\Everton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Barcelona.png">
+    <Content Include="Image\Logo\FC Barcelona.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Basel.png">
+    <Content Include="Image\Logo\FC Basel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Bayern.png">
+    <Content Include="Image\Logo\FC Bayern.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Cincinnati.png">
+    <Content Include="Image\Logo\FC Cincinnati.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Dallas.png">
+    <Content Include="Image\Logo\FC Dallas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Girondins de Bordeaux.png">
+    <Content Include="Image\Logo\FC Girondins de Bordeaux.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC København.png">
+    <Content Include="Image\Logo\FC København.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Porto.png">
+    <Content Include="Image\Logo\FC Porto.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC RB Salzburg.png">
+    <Content Include="Image\Logo\FC RB Salzburg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC St. Gallen 1879.png">
+    <Content Include="Image\Logo\FC St. Gallen 1879.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC St. Gallen.png">
+    <Content Include="Image\Logo\FC St. Gallen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FC Zurich.png">
+    <Content Include="Image\Logo\FC Zurich.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Fenerbahce.png">
+    <Content Include="Image\Logo\Fenerbahce.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Feyenoord.png">
+    <Content Include="Image\Logo\Feyenoord.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Fiorentina.png">
+    <Content Include="Image\Logo\Fiorentina.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\FK Partizan Beograd.png">
+    <Content Include="Image\Logo\FK Partizan Beograd.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Flamengo.png">
+    <Content Include="Image\Logo\Flamengo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Fluminese.png">
+    <Content Include="Image\Logo\Fluminese.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Frosinone.png">
+    <Content Include="Image\Logo\Frosinone.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Fussballclub RB Salzburg.png">
+    <Content Include="Image\Logo\Fussballclub RB Salzburg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Futebol Clube Pacos de Ferreira.png">
+    <Content Include="Image\Logo\Futebol Clube Pacos de Ferreira.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Galatasaray.png">
+    <Content Include="Image\Logo\Galatasaray.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Genoa CFC.png">
+    <Content Include="Image\Logo\Genoa CFC.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Genoa.png">
+    <Content Include="Image\Logo\Genoa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Getafe.png">
+    <Content Include="Image\Logo\Getafe.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Girona.png">
+    <Content Include="Image\Logo\Girona.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Gladbach.png">
+    <Content Include="Image\Logo\Gladbach.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\GNK Dinamo Zagreb.png">
+    <Content Include="Image\Logo\GNK Dinamo Zagreb.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Granada.png">
+    <Content Include="Image\Logo\Granada.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Guanacasteca.png">
+    <Content Include="Image\Logo\Guanacasteca.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Hamburger SV.png">
+    <Content Include="Image\Logo\Hamburger SV.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Hammarby IF.png">
+    <Content Include="Image\Logo\Hammarby IF.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Heerenveen.png">
+    <Content Include="Image\Logo\Heerenveen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Hellas Verona.png">
+    <Content Include="Image\Logo\Hellas Verona.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Hertha.png">
+    <Content Include="Image\Logo\Hertha.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Hoffenheim.png">
+    <Content Include="Image\Logo\Hoffenheim.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\HSV.png">
+    <Content Include="Image\Logo\HSV.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Huddersfield.png">
+    <Content Include="Image\Logo\Huddersfield.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Huesca.png">
+    <Content Include="Image\Logo\Huesca.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\IF Brommapojkarna.png">
+    <Content Include="Image\Logo\IF Brommapojkarna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Independiente.png">
+    <Content Include="Image\Logo\Independiente.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Internazionale.png">
+    <Content Include="Image\Logo\Internazionale.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Juventus.png">
+    <Content Include="Image\Logo\Juventus.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\K Racing Club Genk.png">
+    <Content Include="Image\Logo\K Racing Club Genk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\K Sint-Truidense VV.png">
+    <Content Include="Image\Logo\K Sint-Truidense VV.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\KRC Genk.png">
+    <Content Include="Image\Logo\KRC Genk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Krylja Sovetov.png">
+    <Content Include="Image\Logo\Krylja Sovetov.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Las Palmas.png">
+    <Content Include="Image\Logo\Las Palmas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Lazio.png">
+    <Content Include="Image\Logo\Lazio.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Lech Poznan.png">
+    <Content Include="Image\Logo\Lech Poznan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Leeds Utd.png">
+    <Content Include="Image\Logo\Leeds Utd.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Leicester City.png">
+    <Content Include="Image\Logo\Leicester City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Leicester.png">
+    <Content Include="Image\Logo\Leicester.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Leverkusen.png">
+    <Content Include="Image\Logo\Leverkusen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Lille.png">
+    <Content Include="Image\Logo\Lille.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Liverpool.png">
+    <Content Include="Image\Logo\Liverpool.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Lokomotiv Moscow.png">
+    <Content Include="Image\Logo\Lokomotiv Moscow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Lyon.png">
+    <Content Include="Image\Logo\Lyon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\M.C. Torque.png">
+    <Content Include="Image\Logo\M.C. Torque.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Maccabi Tel-Aviv.png">
+    <Content Include="Image\Logo\Maccabi Tel-Aviv.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Mallorca.png">
+    <Content Include="Image\Logo\Mallorca.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Man City.png">
+    <Content Include="Image\Logo\Man City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Manchester City.png">
+    <Content Include="Image\Logo\Manchester City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Manchester United.png">
+    <Content Include="Image\Logo\Manchester United.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Millonarios F.C..png">
+    <Content Include="Image\Logo\Millonarios F.C..png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Millwall.png">
+    <Content Include="Image\Logo\Millwall.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Mirandes.png">
+    <Content Include="Image\Logo\Mirandes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Molde.png">
+    <Content Include="Image\Logo\Molde.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Montpellier.png">
+    <Content Include="Image\Logo\Montpellier.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Monza 1912.png">
+    <Content Include="Image\Logo\Monza 1912.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Monza.png">
+    <Content Include="Image\Logo\Monza.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Napoli.png">
+    <Content Include="Image\Logo\Napoli.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Necaxa.png">
+    <Content Include="Image\Logo\Necaxa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\New York City.png">
+    <Content Include="Image\Logo\New York City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Newcastle.png">
+    <Content Include="Image\Logo\Newcastle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Nordsjælland.png">
+    <Content Include="Image\Logo\Nordsjælland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Norwich City.png">
+    <Content Include="Image\Logo\Norwich City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Nottingham Forest.png">
+    <Content Include="Image\Logo\Nottingham Forest.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\OGC Nice.png">
+    <Content Include="Image\Logo\OGC Nice.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Olympique Lyonnais.png">
+    <Content Include="Image\Logo\Olympique Lyonnais.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Olympique Marseille.png">
+    <Content Include="Image\Logo\Olympique Marseille.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Osasuna.png">
+    <Content Include="Image\Logo\Osasuna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Oviedo.png">
+    <Content Include="Image\Logo\Oviedo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Palmeiras.png">
+    <Content Include="Image\Logo\Palmeiras.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Paris Saint-Germain.png">
+    <Content Include="Image\Logo\Paris Saint-Germain.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Parma.png">
+    <Content Include="Image\Logo\Parma.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Paços de Ferreira.png">
+    <Content Include="Image\Logo\Paços de Ferreira.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Pisa.png">
+    <Content Include="Image\Logo\Pisa.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Pogon.png">
+    <Content Include="Image\Logo\Pogon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Pohang.png">
+    <Content Include="Image\Logo\Pohang.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Portsmouth.png">
+    <Content Include="Image\Logo\Portsmouth.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\PSV.png">
+    <Content Include="Image\Logo\PSV.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\R Standard de Liege.png">
+    <Content Include="Image\Logo\R Standard de Liege.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Racing Santander.png">
+    <Content Include="Image\Logo\Racing Santander.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\RB Leipzig.png">
+    <Content Include="Image\Logo\RB Leipzig.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Reading.png">
+    <Content Include="Image\Logo\Reading.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Real Betis.png">
+    <Content Include="Image\Logo\Real Betis.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Real Madrid.png">
+    <Content Include="Image\Logo\Real Madrid.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Real Sociedad.png">
+    <Content Include="Image\Logo\Real Sociedad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Real Valladolid.png">
+    <Content Include="Image\Logo\Real Valladolid.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Rennes.png">
+    <Content Include="Image\Logo\Rennes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\River Plate.png">
+    <Content Include="Image\Logo\River Plate.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Rosario Central.png">
+    <Content Include="Image\Logo\Rosario Central.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\RSC Anderlecht.png">
+    <Content Include="Image\Logo\RSC Anderlecht.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Rubin Kazan.png">
+    <Content Include="Image\Logo\Rubin Kazan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\S. Gijon.png">
+    <Content Include="Image\Logo\S. Gijon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Saint-Etienne.png">
+    <Content Include="Image\Logo\Saint-Etienne.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Salernitana.png">
+    <Content Include="Image\Logo\Salernitana.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sampdoria.png">
+    <Content Include="Image\Logo\Sampdoria.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Santos Futebol Clube.png">
+    <Content Include="Image\Logo\Santos Futebol Clube.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Santos Laguna.png">
+    <Content Include="Image\Logo\Santos Laguna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Santos.png">
+    <Content Include="Image\Logo\Santos.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sassuolo.png">
+    <Content Include="Image\Logo\Sassuolo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Schalke 04.png">
+    <Content Include="Image\Logo\Schalke 04.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sevilla.png">
+    <Content Include="Image\Logo\Sevilla.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Shakhtar Donetsk.png">
+    <Content Include="Image\Logo\Shakhtar Donetsk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Shakhtar.png">
+    <Content Include="Image\Logo\Shakhtar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Southampton.png">
+    <Content Include="Image\Logo\Southampton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\SPAL.png">
+    <Content Include="Image\Logo\SPAL.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Spezia Calcio.png">
+    <Content Include="Image\Logo\Spezia Calcio.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sporting CP.png">
+    <Content Include="Image\Logo\Sporting CP.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sporting Portugal.png">
+    <Content Include="Image\Logo\Sporting Portugal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sportklub Rapid Vienna.png">
+    <Content Include="Image\Logo\Sportklub Rapid Vienna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Stade Rennais FC.png">
+    <Content Include="Image\Logo\Stade Rennais FC.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Stoke City.png">
+    <Content Include="Image\Logo\Stoke City.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Stromsgodset.png">
+    <Content Include="Image\Logo\Stromsgodset.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sao Paulo Futebol Clube.png">
+    <Content Include="Image\Logo\Sao Paulo Futebol Clube.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Sao Paulo.png">
+    <Content Include="Image\Logo\Sao Paulo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Torino.png">
+    <Content Include="Image\Logo\Torino.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Tottenham Hotspur.png">
+    <Content Include="Image\Logo\Tottenham Hotspur.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Trabzonspor.png">
+    <Content Include="Image\Logo\Trabzonspor.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\TSG Hoffenheim.png">
+    <Content Include="Image\Logo\TSG Hoffenheim.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Turn- und Sportverein Hartberg.png">
+    <Content Include="Image\Logo\Turn- und Sportverein Hartberg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\U.C. Sampdoria.png">
+    <Content Include="Image\Logo\U.C. Sampdoria.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\U.S. Sassuolo.png">
+    <Content Include="Image\Logo\U.S. Sassuolo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Udinese.png">
+    <Content Include="Image\Logo\Udinese.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Valencia.png">
+    <Content Include="Image\Logo\Valencia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Vasco da Gama.png">
+    <Content Include="Image\Logo\Vasco da Gama.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\VfB Stuttgart.png">
+    <Content Include="Image\Logo\VfB Stuttgart.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\VfL Bochum 1848.png">
+    <Content Include="Image\Logo\VfL Bochum 1848.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Villarreal.png">
+    <Content Include="Image\Logo\Villarreal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Vitesse.png">
+    <Content Include="Image\Logo\Vitesse.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Vitoria Guimaraes.png">
+    <Content Include="Image\Logo\Vitoria Guimaraes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Vitoria Sport Clube.png">
+    <Content Include="Image\Logo\Vitoria Sport Clube.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Vélez.png">
+    <Content Include="Image\Logo\Vélez.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Watford.png">
+    <Content Include="Image\Logo\Watford.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\West Ham United.png">
+    <Content Include="Image\Logo\West Ham United.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Wolfsburg.png">
+    <Content Include="Image\Logo\Wolfsburg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Wolverhampton Wanderers.png">
+    <Content Include="Image\Logo\Wolverhampton Wanderers.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Wolves.png">
+    <Content Include="Image\Logo\Wolves.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Yellow Red KV Mechelen.png">
+    <Content Include="Image\Logo\Yellow Red KV Mechelen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Young Boys.png">
+    <Content Include="Image\Logo\Young Boys.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Club\Zaragoza.png">
+    <Content Include="Image\Logo\Zaragoza.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Albania.png">
+    <Content Include="Image\Logo\Albania.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Argentina.png">
+    <Content Include="Image\Logo\Argentina.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Austria.png">
+    <Content Include="Image\Logo\Austria.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Belgium.png">
+    <Content Include="Image\Logo\Belgium.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Brazil.png">
+    <Content Include="Image\Logo\Brazil.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Canada.png">
+    <Content Include="Image\Logo\Canada.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Colombia.png">
+    <Content Include="Image\Logo\Colombia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Costa Rica.png">
+    <Content Include="Image\Logo\Costa Rica.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Croatia.png">
+    <Content Include="Image\Logo\Croatia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Czech Republic.png">
+    <Content Include="Image\Logo\Czech Republic.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Denmark.png">
+    <Content Include="Image\Logo\Denmark.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Ecuador.png">
+    <Content Include="Image\Logo\Ecuador.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\England.png">
+    <Content Include="Image\Logo\England.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\France.png">
+    <Content Include="Image\Logo\France.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Georgia.png">
+    <Content Include="Image\Logo\Georgia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Germany.png">
+    <Content Include="Image\Logo\Germany.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Ghana.png">
+    <Content Include="Image\Logo\Ghana.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Greece.png">
+    <Content Include="Image\Logo\Greece.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Guinea.png">
+    <Content Include="Image\Logo\Guinea.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Hungary.png">
+    <Content Include="Image\Logo\Hungary.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Iceland.png">
+    <Content Include="Image\Logo\Iceland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Israel.png">
+    <Content Include="Image\Logo\Israel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Italy.png">
+    <Content Include="Image\Logo\Italy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Ivory Coast.png">
+    <Content Include="Image\Logo\Ivory Coast.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Japan.png">
+    <Content Include="Image\Logo\Japan.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Mali.png">
+    <Content Include="Image\Logo\Mali.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Mexico.png">
+    <Content Include="Image\Logo\Mexico.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Morocco.png">
+    <Content Include="Image\Logo\Morocco.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Netherlands.png">
+    <Content Include="Image\Logo\Netherlands.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\New Zealand.png">
+    <Content Include="Image\Logo\New Zealand.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Nigeria.png">
+    <Content Include="Image\Logo\Nigeria.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\North Macedonia.png">
+    <Content Include="Image\Logo\North Macedonia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Northern Ireland.png">
+    <Content Include="Image\Logo\Northern Ireland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Norway.png">
+    <Content Include="Image\Logo\Norway.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Poland.png">
+    <Content Include="Image\Logo\Poland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Portugal.png">
+    <Content Include="Image\Logo\Portugal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Republic of Ireland.png">
+    <Content Include="Image\Logo\Republic of Ireland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Russia.png">
+    <Content Include="Image\Logo\Russia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Scotland.png">
+    <Content Include="Image\Logo\Scotland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Senegal.png">
+    <Content Include="Image\Logo\Senegal.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Serbia.png">
+    <Content Include="Image\Logo\Serbia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Slovenia.png">
+    <Content Include="Image\Logo\Slovenia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\South Korea.png">
+    <Content Include="Image\Logo\South Korea.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Spain.png">
+    <Content Include="Image\Logo\Spain.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Sweden.png">
+    <Content Include="Image\Logo\Sweden.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Switzerland.png">
+    <Content Include="Image\Logo\Switzerland.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\The Gambia.png">
+    <Content Include="Image\Logo\The Gambia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Tunisia.png">
+    <Content Include="Image\Logo\Tunisia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Ukraine.png">
+    <Content Include="Image\Logo\Ukraine.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\United States.png">
+    <Content Include="Image\Logo\United States.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Uruguay.png">
+    <Content Include="Image\Logo\Uruguay.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Wales.png">
+    <Content Include="Image\Logo\Wales.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image\Logo\Nation\Zambia.png">
+    <Content Include="Image\Logo\Zambia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Image\Picture\Aaron Ciammaglichella.png">

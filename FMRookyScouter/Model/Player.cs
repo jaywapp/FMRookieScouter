@@ -9,8 +9,9 @@ namespace FMRookyScouter.Model
     {
         #region Properties
         public Common Common { get; set; } = new Common();
-        public Club Club { get; set; } = new Club();
-        public Nation Nation { get; set; } = new Nation();
+        public Belong Belong { get; set; } = new Belong();
+        public Part Part { get; set; } = new Part();
+        public Possibility Possibility { get; set; } = new Possibility();
         public Mental Mental { get; set; } = new Mental();
         public Physical Physical { get; set; } = new Physical();
         public Technical Technical { get; set; } = new Technical();
@@ -30,7 +31,7 @@ namespace FMRookyScouter.Model
                 var child = element.Element(property.Name);
                 var value = property.GetValue(this);
 
-                if (value is IXElementSerializable serializable)
+                if (value is IXElementSerializable serializable && child != null)
                     serializable.Load(child);
             }
         }
@@ -44,7 +45,7 @@ namespace FMRookyScouter.Model
             {
                 var value = property.GetValue(this);
 
-                if(value is IXElementSerializable serializable)
+                if (value is IXElementSerializable serializable)
                     element.Add(serializable.Save());
             }
 
@@ -54,7 +55,7 @@ namespace FMRookyScouter.Model
 
         public override string ToString() => $"{Common.Name}";
 
-        public string GetID() => $"{Common.Name} {Club.Name} {Nation.Name}";
+        public string GetID() => $"{Common.Name} {Belong.Club} {Belong.Nation}";
         #endregion
     }
 }
