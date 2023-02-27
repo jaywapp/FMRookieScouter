@@ -41,6 +41,7 @@ namespace FMRookyScouter.Control.ListBox
         }
         #endregion
 
+        #region Functions
         private void OnDataContextChanged(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
         {
             if (!(e.NewValue is string name))
@@ -48,5 +49,6 @@ namespace FMRookyScouter.Control.ListBox
 
             ImageSource = $"/FMRookyScouter;component/Image/Logo/{name.TrimEnglish()}.png";
         }
+        #endregion
     }
 }

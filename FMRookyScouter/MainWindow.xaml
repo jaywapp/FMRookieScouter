@@ -6,10 +6,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:view="clr-namespace:FMRookyScouter.View" 
-        xmlns:table="clr-namespace:FMRookyScouter.Control.Stat.Table" 
-        xmlns:graph="clr-namespace:FMRookyScouter.Control.Stat.Graph"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="FM Rookie Scouter" Height="800" Width="1800">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
@@ -51,16 +48,17 @@
                 <ColumnDefinition Width="1.5*"/>
             </Grid.ColumnDefinitions>
 
-
+            <!--Filter-->
             <TextBlock Grid.Row="0" Grid.Column="0" Text="Filter" Style="{StaticResource Header}"/>
             <view:FilterView Grid.Row="1" Grid.Column="0" DataContext="{Binding FilterViewModel}"/>
 
+            <!--Player-->
             <TextBlock Grid.Row="3" Grid.Column="0" Text="Players" Style="{StaticResource Header}"/>
             <TabControl Grid.Row="4" Grid.Column="0" ItemsSource="{Binding PlayerTabs}"/>
+            
+            <!--Player Stat-->
             <TextBlock Grid.Row="0" Grid.Column="2" Text="Stat" Style="{StaticResource Header}"/>
             <view:PlayerStatView Grid.Row="1" Grid.RowSpan="4" Grid.Column="2" DataContext="{Binding PlayerStatViewModel}"/>
         </Grid>
     </Grid>
-
-
 </adonisControls:AdonisWindow>

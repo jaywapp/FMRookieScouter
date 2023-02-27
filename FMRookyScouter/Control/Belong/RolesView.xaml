@@ -49,7 +49,6 @@
 
         <lvc:CartesianChart Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4"
             Series="{Binding ElementName=_userControl, Path=Series}" 
-            YAxes="{Binding ElementName=_userControl, Path=YAxes}"
-            XAxes="{Binding ElementName=_userControl, Path=XAxes}"/>
+            YAxes="{Binding ElementName=_userControl, Path=YAxes}"/>
     </Grid>
 </UserControl>

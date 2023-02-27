@@ -1,5 +1,4 @@
 ﻿using FMRookyScouter.Event;
-using FMRookyScouter.Interface;
 using FMRookyScouter.Model;
 using FMRookyScouter.Service.Filter;
 using ReactiveUI;

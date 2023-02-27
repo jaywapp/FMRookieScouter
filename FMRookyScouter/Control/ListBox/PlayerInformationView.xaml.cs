@@ -41,6 +41,7 @@ namespace FMRookyScouter.Control.ListBox
         }
         #endregion
 
+        #region Functions
         private void OnDataContextChanged(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
         {
             if (!(e.NewValue is Player player))
@@ -48,5 +49,6 @@ namespace FMRookyScouter.Control.ListBox
 
             DisplayName = $"{player.Common.Name} ({player.Common.Age})";
         }
+        #endregion
     }
 }
