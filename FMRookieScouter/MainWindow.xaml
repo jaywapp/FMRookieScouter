@@ -5,8 +5,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:view="clr-namespace:FMRookieScouter.View" 
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        xmlns:view="clr-namespace:FMRookieScouter.View" xmlns:AdsJumboWinForm="clr-namespace:AdsJumboWinForm;assembly=AdsJumboWinForm"
+    mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="FM Rookie Scouter" Height="800" Width="1800">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
@@ -46,6 +46,7 @@
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="160"/>
             </Grid.ColumnDefinitions>
 
             <!--Filter-->
@@ -59,6 +60,10 @@
             <!--Player Stat-->
             <TextBlock Grid.Row="0" Grid.Column="2" Text="Stat" Style="{StaticResource Header}"/>
             <view:PlayerStatView Grid.Row="1" Grid.RowSpan="4" Grid.Column="2" DataContext="{Binding PlayerStatViewModel}"/>
+
+            <WindowsFormsHost Grid.Row="0" Grid.RowSpan="5" Grid.Column="3"  Margin="10">
+                <AdsJumboWinForm:BannerAds x:Name="banner"/>
+            </WindowsFormsHost>
         </Grid>
     </Grid>
 </adonisControls:AdonisWindow>

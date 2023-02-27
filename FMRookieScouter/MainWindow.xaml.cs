@@ -11,6 +11,7 @@ namespace FMRookieScouter
         {
             DataContext = new MainWindowViewModel();
             InitializeComponent();
+            banner.ShowAd(160, 600, "1t1w96rt04na");
         }
     }
 }
