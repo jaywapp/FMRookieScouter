@@ -42,6 +42,9 @@ Source: "{#TargetDir}*.exe"; DestDir: "{app}"; Flags: ignoreversion recursesubdi
 Source: "{#TargetDir}*.dll"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#TargetDir}*.dll.config"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "{#TargetDir}*.config"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#TargetDir}\DB\*.xml"; DestDir: "{app}\DB"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#TargetDir}\Image\Logo\*.png"; DestDir: "{app}\Image\Logo"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "{#TargetDir}\Image\Picture\*.png"; DestDir: "{app}\Image\Picture"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
