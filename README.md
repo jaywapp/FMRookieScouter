@@ -1,4 +1,6 @@
 # FMRookieScouter
+:link: [Download Setup](https://github.com/jaywapp/FMRookieScouter/raw/master/Output/FMRookieScouter_setup.exe)
+
 ![1](https://user-images.githubusercontent.com/20869970/222397102-044e6dde-99b3-4379-a73b-a749f29ab0dc.png)
 
 ## 선수 목록
